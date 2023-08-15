@@ -1,20 +1,28 @@
 "use client";
 
 import Image from "next/image";
-import profilePic from "IMG_5173 - Low res.jpg";
+import profilePic from "/images/profilepic.jpg";
 
 export default function Home() {
   return (
-    <main className="flex justify-around  grow-1 content-center items-center h-[80%] ">
+    <main className="container mx-auto grid grid-cols-1 items-center   sm:grid-cols-2">
       <Image
-        className="rounded-xl max-w-sm w-auto max-h-[75%] object-contain border-black border-8"
+        className="rounded-xl max-w-[22rem] w-auto max-h-80 my-8 sm:max-h-[28rem] place-self-center shadow-lg object-contain"
         src={profilePic}
         // width={2316}
         // height={3088}
         alt="Adam and his wife smiling along the coast of Crete"
       />
-      <article className="grow-3">
-        <p> The all about me page!</p>
+      <article className="place-self-center px-8">
+        <p>
+          Team-oriented problem-solver with a new found love for coding. Since
+          joining the Northcoders software development bootcamp, I’ve found that
+          I love how programming allows me to challenge myself and find new ways
+          of approaching tasks. Changing careers from teaching to software
+          development is a big jump, but it allows me to bring many skills I
+          developed as a teacher to coding, such as communicating clearly and
+          effectively, being reflective and building relationships.
+        </p>
       </article>
     </main>
   );
