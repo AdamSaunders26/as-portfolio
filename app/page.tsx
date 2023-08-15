@@ -3,9 +3,9 @@ import profilePic from "IMG_5173 - Low res.jpg";
 
 export default function Home() {
   return (
-    <main className="flex justify-around my-8 grow-1 content-center items-center h-full">
+    <main className="flex justify-around my-8 grow-1 content-center items-center ">
       <Image
-        className="rounded-xl max-w-sm w-auto max-h-full h-auto object-contain border-black border-8"
+        className="rounded-xl max-w-sm w-auto   object-contain border-black border-8"
         src={profilePic}
         // width={2316}
         // height={3088}

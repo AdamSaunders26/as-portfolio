@@ -18,11 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={quicksand.className}>
-      <body className="bg-white max-h-screen ">
-        <main className=" container mx-auto my-auto flex flex-col h-screen">
-          <Header />
-          {children}
-        </main>
+      <body className="bg-white h-full container mx-auto my-auto flex flex-col ">
+        <Header />
+        {children}
       </body>
     </html>
   );
