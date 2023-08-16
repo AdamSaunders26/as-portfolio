@@ -1,13 +1,19 @@
+import { RefObject } from "react";
 import { BiLeftArrow } from "react-icons/bi";
-
-export default function LeftButton({ carouselRef }) {
+interface Props {
+  carouselRef: RefObject<HTMLDivElement>;
+}
+export default function LeftButton({ carouselRef }: Props) {
   return (
     <div
+      className="place-self-center text-emerald-800 active:text-emerald-900 active:scale-75"
       onClick={() => {
-        carouselRef.current.scrollLeft -= 600;
+        if (carouselRef.current) {
+          carouselRef.current.scrollLeft -= 600;
+        }
       }}
     >
-      <BiLeftArrow />
+      <BiLeftArrow className="h-12 w-12" />
     </div>
   );
 }

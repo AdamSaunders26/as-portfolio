@@ -5,10 +5,8 @@ import ProjectCarousel from "./ProjectCarousel";
 
 export default function ProjectPage() {
   return (
-    <main>
-      <div>
-        <ProjectCarousel />
-      </div>
+    <main className="mx-4">
+      <ProjectCarousel />
     </main>
   );
 }

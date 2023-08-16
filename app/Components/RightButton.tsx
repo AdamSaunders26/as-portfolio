@@ -1,13 +1,19 @@
+import { RefObject } from "react";
 import { BiRightArrow } from "react-icons/bi";
-
-export default function RightButton({ carouselRef }) {
+interface Props {
+  carouselRef: RefObject<HTMLDivElement>;
+}
+export default function RightButton({ carouselRef }: Props) {
   return (
     <div
+      className="place-self-center text-emerald-800 active:text-emerald-900 active:scale-75"
       onClick={() => {
-        carouselRef.current.scrollLeft += 600;
+        if (carouselRef.current) {
+          carouselRef.current.scrollLeft += 600;
+        }
       }}
     >
-      <BiRightArrow />
+      <BiRightArrow className="h-12 w-12 " />
     </div>
   );
 }
