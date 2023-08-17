@@ -19,7 +19,7 @@ export const projects: ProjectType[] = [
   },
   {
     key: 1,
-    project: "NC News Back End",
+    project: "NC News API",
     imageSrc: ncnews,
     alt: "NC News website displayed on a laptop and phone",
     details:
@@ -36,7 +36,7 @@ export const projects: ProjectType[] = [
   {
     key: 3,
     imageSrc: ncnews,
-    project: "Portfolio website",
+    project: "Portfolio",
     alt: "NC News website displayed on a laptop and phone",
     details:
       "3. NC News is a utilies the backend API which I had alreayd  created at thsi point. It is an ongoing work in progress which is  still lacking some features I'd like to implement. There were many  challenges that had to be faced in order to complete this task.",

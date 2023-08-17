@@ -10,7 +10,7 @@ export default function Header() {
           Adam Saunders
         </p>
       </div>
-      <div className="flex justify-around">
+      <div className="flex justify-around mt-2">
         <Link href="/" className={linkClass}>
           <p>About Me</p>
         </Link>

@@ -11,13 +11,10 @@ export default function LeftButton({ carouselRef, setCurrentProject }: Props) {
       onClick={() => {
         if (carouselRef.current) {
           carouselRef.current.scrollLeft -= 525;
-          setCurrentProject((current) => {
-            return current > 0 ? (current -= 1) : current;
-          });
         }
       }}
     >
-      <BiLeftArrow className="h-12 w-12" />
+      <BiLeftArrow className="h-8 w-8 sm:h-12 sm:w-12" />
     </div>
   );
 }
