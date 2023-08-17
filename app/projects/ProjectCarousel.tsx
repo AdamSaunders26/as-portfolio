@@ -9,11 +9,6 @@ import Carousel from "./Carousel";
 import CarouselIndicator from "./CarouselIndicator";
 
 export default function ProjectCarousel() {
-  //   const projectClassName =
-  //     "border-4 sm:border-blue-500 md:border-green-500 lg:border-violet-500 snap-center basis-1/4 shrink-0 relative mx-10";
-  //   const projectDetailsClassName =
-  //     "w-72 sm:w-[30rem] md:w-[36rem] lg:w-[50rem] p-4";
-
   const carouselRef = useRef<HTMLDivElement>(null);
   const [currentProject, setCurrentProject] = useState<number>(0);
   const [scrollSnapPoint, setScrollSnapPoint] = useState<number>(0);

@@ -25,7 +25,7 @@ export default function CarouselIndicator({
                 carouselRef.current.scrollLeft = scrollSnapPoint * key;
               }
             }}
-            className={` text-center mx-2 p-2 px-4 font-semibold text-neutral-700 rounded-lg hover:cursor-pointer  ${
+            className={` text-center align-middle mx-2  px-2 font-semibold text-neutral-700 rounded-lg hover:cursor-pointer  ${
               currentProject === key
                 ? " bg-emerald-800  text-white"
                 : " hover:bg-emerald-100"
