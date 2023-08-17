@@ -28,7 +28,7 @@ export default function Carousel({
             key={key}
           >
             <div className={"w-72 sm:w-[30rem] md:w-[36rem] lg:w-[50rem] "}>
-              <Image className=" " src={imageSrc} alt={alt} />
+              <Image className=" " src={imageSrc} alt={alt} priority={true} />
               <p className="">{details}</p>
             </div>
           </div>

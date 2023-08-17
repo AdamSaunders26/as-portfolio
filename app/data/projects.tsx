@@ -15,7 +15,7 @@ export const projects: ProjectType[] = [
     imageSrc: ncnews,
     alt: "NC News website displayed on a laptop and phone",
     details:
-      "0. NC News is a utilies the backend API which I had alreayd  created at thsi point. It is an ongoing work in progress which is  still lacking some features I'd like to implement. There were many  challenges that had to be faced in order to complete this task.",
+      "0. NC News is a web app which utilises the backend API which I had already created at this point. It is an ongoing work in progress which is  still lacking some features I'd like to implement. There were many challenges that had to be faced in order to complete this task. Blah blah blah etc",
   },
   {
     key: 1,
@@ -23,7 +23,7 @@ export const projects: ProjectType[] = [
     imageSrc: ncnews,
     alt: "NC News website displayed on a laptop and phone",
     details:
-      "1. NC News is a utilies the backend API which I had alreayd  created at thsi point. It is an ongoing work in progress which is  still lacking some features I'd like to implement. There were many  challenges that had to be faced in order to complete this task.",
+      "1. NC News is a web app which utilises the backend API which I had already created at this point. It is an ongoing work in progress which is  still lacking some features I'd like to implement. There were many challenges that had to be faced in order to complete this task. Blah blah blah etc",
   },
   {
     key: 2,
@@ -31,7 +31,7 @@ export const projects: ProjectType[] = [
     imageSrc: ncnews,
     alt: "NC News website displayed on a laptop and phone",
     details:
-      "2. NC News is a utilies the backend API which I had alreayd  created at thsi point. It is an ongoing work in progress which is  still lacking some features I'd like to implement. There were many  challenges that had to be faced in order to complete this task.",
+      "2. NC News is a web app which utilises the backend API which I had already created at this point. It is an ongoing work in progress which is  still lacking some features I'd like to implement. There were many challenges that had to be faced in order to complete this task. Blah blah blah etc",
   },
   {
     key: 3,
@@ -39,6 +39,6 @@ export const projects: ProjectType[] = [
     project: "Portfolio",
     alt: "NC News website displayed on a laptop and phone",
     details:
-      "3. NC News is a utilies the backend API which I had alreayd  created at thsi point. It is an ongoing work in progress which is  still lacking some features I'd like to implement. There were many  challenges that had to be faced in order to complete this task.",
+      "3. NC News is a web app which utilises the backend API which I had already created at this point. It is an ongoing work in progress which is  still lacking some features I'd like to implement. There were many challenges that had to be faced in order to complete this task. Blah blah blah etc",
   },
 ];

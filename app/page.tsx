@@ -9,8 +9,8 @@ export default function Home() {
       <Image
         className="rounded-xl max-w-[22rem] w-auto max-h-80 my-8 sm:max-h-[28rem] place-self-center shadow-lg object-contain"
         src={profilePic}
-        // width={2316}
-        // height={3088}
+        priority={true}
+        placeholder="blur"
         alt="Adam and his wife smiling along the coast of Crete"
       />
       <article className="place-self-center px-8">

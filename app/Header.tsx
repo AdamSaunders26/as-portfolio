@@ -6,7 +6,7 @@ export default function Header() {
   const pathname = usePathname();
 
   const linkClass =
-    "hover:underline text-center rounded-lg px-2 active:text-emerald-700 place-self-center sm:place-self-end sm:mr-4";
+    "hover:underline text-center rounded-lg px-2 py-1 active:text-emerald-700 place-self-center sm:place-self-end sm:mr-4";
 
   return (
     <header className="flex flex-col justify-between items-center py-4 font-semibold text-neutral-700 border-b-2 border-emerald-500 sm:flex-row">
@@ -34,13 +34,13 @@ export default function Header() {
           <p>Projects</p>
         </Link>
         <Link
-          href="/skills"
+          href="/technologies"
           className={
             linkClass +
-            (pathname === "/skills" ? " bg-emerald-800 text-white" : "")
+            (pathname === "/technologies" ? " bg-emerald-800 text-white" : "")
           }
         >
-          <p>Skills</p>
+          <p>Technologies</p>
         </Link>
         <Link
           href="/contact"
