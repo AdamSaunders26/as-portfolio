@@ -14,6 +14,10 @@ export default function Home() {
         alt="Adam and his wife smiling along the coast of Crete"
       />
       <article className="place-self-center p-4 mx-4 rounded-lg bg-emerald-100">
+        <span className="font-extrabold text-red-600">
+          CURRENTLY A WORK IN PROGRESS, MANY FEATURES ARE NOT YET IMPLEMENTED OR
+          MAY CONTAIN BUGS
+        </span>
         Team-oriented problem-solver with a new found love for coding. Since
         joining the Northcoders software development bootcamp, I’ve found that I
         love how programming allows me to challenge myself and find new ways of
