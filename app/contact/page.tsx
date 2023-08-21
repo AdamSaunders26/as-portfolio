@@ -1,15 +1,16 @@
 "use client";
 
 import { useReducer } from "react";
+import axios from "axios";
+
+export interface formState {
+  subject: string;
+  message: string;
+  name: string;
+  email: string;
+}
 
 export default function ContactPage() {
-  interface formState {
-    subject: string;
-    message: string;
-    name: string;
-    email: string;
-  }
-
   function formReducer(state: formState, { target }: { target: EventTarget }) {
     const formTarget = target as HTMLFormElement;
     return {
@@ -33,6 +34,14 @@ export default function ContactPage() {
       onSubmit={(e) => {
         e.preventDefault();
         console.log(formData);
+        axios
+          .post("http://localhost:3000/api/contact", { formData })
+          .then(({ data }) => {
+            console.log(data);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       }}
     >
       <label htmlFor="subject">Subject: </label>
