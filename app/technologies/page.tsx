@@ -1,14 +1,13 @@
-import BackEnd from "./BackEnd";
-import FrontEnd from "./FrontEnd";
-import Languages from "./Languages";
+import { backEndTechs, frontEndTechs, languageArr } from "../data/technologies";
+import TechSection from "./TechSection";
 
-export default function SkillsPage() {
+export default function TechnologiesPage() {
   return (
-    <main className="flex m-4 text-neutral-700">
-      <FrontEnd />
-      <div>
-        <Languages />
-        <BackEnd />
+    <main className="flex flex-col m-2 text-neutral-700">
+      <TechSection sectionName={"Languages"} techArray={languageArr} />
+      <div className="flex ">
+        <TechSection sectionName={"Front-End"} techArray={frontEndTechs} />
+        <TechSection sectionName={"Back-End"} techArray={backEndTechs} />
       </div>
     </main>
   );

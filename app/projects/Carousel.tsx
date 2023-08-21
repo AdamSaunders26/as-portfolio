@@ -19,7 +19,7 @@ export default function Carousel({
       onScroll={(e) => {
         handleScroll(e);
       }}
-      className=" px-4  col-span-9 flex  overflow-x-scroll snap-mandatory snap-x scroll-smooth"
+      className=" px-4 col-span-9 flex  overflow-x-scroll snap-mandatory snap-x scroll-smooth "
     >
       {projects.map(({ key, imageSrc, alt, details }) => {
         return (
@@ -29,7 +29,7 @@ export default function Carousel({
           >
             <div className={"w-72 sm:w-[30rem] md:w-[36rem] lg:w-[50rem] "}>
               <Image className=" " src={imageSrc} alt={alt} priority={true} />
-              <p className="">{details}</p>
+              <p className="bg-emerald-100 rounded-lg p-2 mb-2">{details}</p>
             </div>
           </div>
         );
