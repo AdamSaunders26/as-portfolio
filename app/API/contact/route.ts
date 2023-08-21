@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import EmailSend from "@/app/api/contact/EmailSend";
 import { formState } from "@/app/contact/page";
+import EmailSend from "./EmailSend";
 
 export async function POST(req: NextRequest, res: NextResponse) {
   const { method } = req;
