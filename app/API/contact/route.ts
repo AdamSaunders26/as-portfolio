@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { formState } from "@/app/contact/page";
 import EmailSend from "./EmailSend";
+import { formState } from "@/app/contact/page";
 
 export async function POST(req: NextRequest, res: NextResponse) {
   const { method } = req;
@@ -10,8 +10,12 @@ export async function POST(req: NextRequest, res: NextResponse) {
 Message: ${formData.message}`;
 
   if (method === "POST") {
-    console.log("here");
+    console.log("u made it bro!");
     await EmailSend(formData.subject, body);
     return NextResponse.json({ msg: "success" }, { status: 200 });
   }
+}
+
+export async function GET() {
+  return NextResponse.json({ msg: "compiled, ur welcome" });
 }
