@@ -34,6 +34,7 @@ export default function ContactPage() {
       onSubmit={(e) => {
         e.preventDefault();
         console.log(formData);
+        console.log(process.env.NEXT_PUBLIC_API_URL);
         if (process.env.NEXT_PUBLIC_API_URL) {
           axios
             .post(process.env.NEXT_PUBLIC_API_URL, { formData })

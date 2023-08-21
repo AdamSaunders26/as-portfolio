@@ -10,11 +10,8 @@ export async function POST(req: NextRequest, res: NextResponse) {
 Message: ${formData.message}`;
 
   if (method === "POST") {
+    console.log("here");
     await EmailSend(formData.subject, body);
     return NextResponse.json({ msg: "success" }, { status: 200 });
   }
-}
-
-export async function GET() {
-  return new Response("compiled, ur welcome");
 }
