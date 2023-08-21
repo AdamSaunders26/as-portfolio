@@ -16,7 +16,7 @@ export default function Home() {
       <article className="place-self-center p-4 mx-4 rounded-lg bg-emerald-100">
         <span className="font-extrabold text-red-600">
           CURRENTLY A WORK IN PROGRESS, MANY FEATURES ARE NOT YET IMPLEMENTED OR
-          MAY CONTAIN BUGS
+          MAY CONTAIN BUGS.
         </span>
         Team-oriented problem-solver with a new found love for coding. Since
         joining the Northcoders software development bootcamp, I’ve found that I
