@@ -34,14 +34,16 @@ export default function ContactPage() {
       onSubmit={(e) => {
         e.preventDefault();
         console.log(formData);
-        axios
-          .post("http://localhost:3000/api/contact", { formData })
-          .then(({ data }) => {
-            console.log(data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
+        if (process.env.NEXT_PUBLIC_API_URL) {
+          axios
+            .post(process.env.NEXT_PUBLIC_API_URL, { formData })
+            .then(({ data }) => {
+              console.log(data);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        }
       }}
     >
       <label htmlFor="subject">Subject: </label>

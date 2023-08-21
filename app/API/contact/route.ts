@@ -14,3 +14,7 @@ Message: ${formData.message}`;
     return NextResponse.json({ msg: "success" }, { status: 200 });
   }
 }
+
+export async function GET() {
+  return new Response("compiled, ur welcome");
+}
