@@ -1,3 +1,5 @@
+import React from "react";
+
 interface Props {
   sectionName: string;
   techArray: [string, string, JSX.Element][];
@@ -10,14 +12,19 @@ export default function TechSection({ sectionName, techArray }: Props) {
       <div className="flex flex-wrap justify-around">
         {techArray.map(([name, link, logo]) => {
           return (
-            <a
-              target="_blank"
-              href={link}
-              className="m-2 hover:scale-110 duration-200"
-            >
-              {logo}
-              <p className="text-center">{name}</p>
-            </a>
+            <React.Fragment key={link}>
+              <a
+                key={link}
+                target="_blank"
+                href={link}
+                className="m-2 hover:scale-110 duration-200"
+              >
+                {logo}
+                <p key={name} className="text-center">
+                  {name}
+                </p>
+              </a>
+            </React.Fragment>
           );
         })}
       </div>
