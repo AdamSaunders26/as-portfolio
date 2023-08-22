@@ -92,7 +92,7 @@ export default function ContactPage() {
 
   return (
     <main className="flex flex-col  m-2">
-      <h2 className="text-3xl mx-2 font-bold text-emerald-800">
+      <h2 className="text-2xl mx-2 font-bold text-emerald-800">
         Get in touch!
       </h2>
       <p className="mx-2">
