@@ -17,7 +17,7 @@ export default function ContactFormInput({
   inputClass,
 }: Props) {
   const inputType = formData[inputName as keyof formState];
-  console.log(inputType);
+
   return (
     <div className="flex flex-col">
       <label

@@ -17,8 +17,10 @@ Message: ${formData.Message}`;
 
   console.log("u made it bro!");
   try {
-    await sendEmail(formData.Subject, body);
-    return NextResponse.json({ msg: "success" }, { status: 200 });
+    if (formData.Subject) {
+      await sendEmail(formData.Subject, body);
+      return NextResponse.json({ msg: "success" }, { status: 200 });
+    }
   } catch (error) {
     console.log(error);
     return NextResponse.json({ msg: "it broke" }, { status: 500 });

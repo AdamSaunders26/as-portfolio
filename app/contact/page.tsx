@@ -55,7 +55,15 @@ export default function ContactPage() {
         setFormData={setFormData}
         inputClass={inputClass}
       />
-      <label htmlFor="Message">Message: </label>
+      <label
+        htmlFor="Message"
+        className={formData.Message === "" ? "text-red-500" : ""}
+      >
+        <span className="text-neutral-700">Message:</span>
+        {formData.Message === ""
+          ? ` Please provide a message before submitting.`
+          : null}
+      </label>
       <textarea
         id="Message"
         name="Message"
