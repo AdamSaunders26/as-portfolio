@@ -11,13 +11,13 @@ export async function POST(req: NextRequest, res: NextResponse) {
   const { formData }: { formData: formState } = await req.json();
 
   console.log(formData);
-  const body = `Message from ${formData.name} via ${formData.email} on Portfolio site.
+  const body = `Message from ${formData.Name} via ${formData.Email} on Portfolio site.
   
-Message: ${formData.message}`;
+Message: ${formData.Message}`;
 
   console.log("u made it bro!");
   try {
-    await sendEmail(formData.subject, body);
+    await sendEmail(formData.Subject, body);
     return NextResponse.json({ msg: "success" }, { status: 200 });
   } catch (error) {
     console.log(error);

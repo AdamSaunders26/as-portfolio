@@ -1,16 +1,19 @@
 "use client";
 
-import { useReducer } from "react";
+import { FormEvent, useReducer, useState } from "react";
 import axios from "axios";
+import ContactFormInput from "./ContactFormInput";
 
 export interface formState {
-  subject: string;
-  message: string;
-  name: string;
-  email: string;
+  Subject: string | null;
+  Message: string | null;
+  Name: string | null;
+  Email: string | null;
 }
 
 export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+
   function formReducer(state: formState, { target }: { target: EventTarget }) {
     const formTarget = target as HTMLFormElement;
     return {
@@ -20,76 +23,67 @@ export default function ContactPage() {
   }
 
   const [formData, setFormData] = useReducer(formReducer, {
-    subject: "",
-    message: "",
-    name: "",
-    email: "",
+    Subject: null,
+    Message: null,
+    Name: null,
+    Email: null,
   });
 
-  const inputClass = "rounded-lg mx-4";
-
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (process.env.NEXT_PUBLIC_API_URL) {
+      axios
+        .post(process.env.NEXT_PUBLIC_API_URL, { formData })
+        .then(({ data }) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }
+  const inputClass = "rounded-lg mx-4 p-2 mb-4 mt-2 border font-normal";
+  console.log(formData);
   return (
     <form
-      className="bg-emerald-100 flex flex-col m-2 p-2 rounded-xl gap-2"
-      onSubmit={(e) => {
-        e.preventDefault();
-        console.log(formData);
-        console.log(process.env.NEXT_PUBLIC_API_URL);
-        if (process.env.NEXT_PUBLIC_API_URL) {
-          axios
-            .post(process.env.NEXT_PUBLIC_API_URL, { formData })
-            .then(({ data }) => {
-              console.log(data);
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        }
-      }}
+      className="bg-emerald-100 flex flex-col m-2 my-4 text-neutral-700 font-semibold p-2 rounded-xl "
+      onSubmit={handleSubmit}
     >
-      <label htmlFor="subject">Subject: </label>
-      <input
-        id="subject"
-        name="subject"
-        onChange={setFormData}
-        className={inputClass}
+      <ContactFormInput
+        formData={formData}
+        inputName={"Subject"}
+        setFormData={setFormData}
+        inputClass={inputClass}
       />
-      <label htmlFor="message">Message: </label>
+      <label htmlFor="Message">Message: </label>
       <textarea
-        id="message"
-        name="message"
+        id="Message"
+        name="Message"
         onChange={setFormData}
-        className={inputClass}
+        onClick={setFormData}
+        className={
+          formData.Message === ""
+            ? inputClass +
+              " border-red-500 focus:outline-none focus:ring focus:ring-red-500 "
+            : inputClass +
+              " border-emerald-800 focus:outline-none focus:ring focus:ring-emerald-800 "
+        }
       />
-      <label htmlFor="name">Name: </label>
-      <input
-        id="name"
-        name="name"
-        onChange={setFormData}
-        className={inputClass}
+
+      <ContactFormInput
+        formData={formData}
+        inputName={"Name"}
+        setFormData={setFormData}
+        inputClass={inputClass}
       />
-      <label htmlFor="email">Email: </label>
-      <input
-        id="email"
-        name="email"
-        onChange={setFormData}
-        className={inputClass}
+      <ContactFormInput
+        formData={formData}
+        inputName={"Email"}
+        setFormData={setFormData}
+        inputClass={inputClass}
       />
+
       <button className="bg-white rounded-xl w-max px-2 ">Send</button>
-      <button
-        onClick={(e) => {
-          e.preventDefault();
-          console.log("click");
-          if (process.env.NEXT_PUBLIC_API_URL) {
-            axios.get(process.env.NEXT_PUBLIC_API_URL).then(({ data }) => {
-              console.log(data);
-            });
-          }
-        }}
-        className="bg-white rounded-xl w-max px-2 "
-      >
-        Send GET
-      </button>
     </form>
   );
 }
