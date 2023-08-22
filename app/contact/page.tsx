@@ -40,15 +40,22 @@ export default function ContactPage() {
   };
   const [formData, setFormData] = useReducer(formReducer, initialState);
 
+  console.log(formData);
+
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setIsSubmitting(true);
     setIsError(false);
-    if (formData.Email) {
-      setValidEmail(emailRegex.test(formData.Email));
-    }
-
     let submitOkay = true;
+
+    if (formData.Email) {
+      if (!emailRegex.test(formData.Email)) {
+        setValidEmail(false);
+        setIsError(true);
+        setIsSubmitting(false);
+        submitOkay = false;
+      }
+    }
 
     for (const element in formData) {
       if (
@@ -69,6 +76,7 @@ export default function ContactPage() {
         .then(({ data }) => {
           setIsSubmitting(false);
           setSubmitSuccess(true);
+          setValidEmail(true);
           setFormData({ target: "string" });
           console.log(data);
         })
