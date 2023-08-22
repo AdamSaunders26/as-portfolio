@@ -76,6 +76,20 @@ export default function ContactPage() {
         className={inputClass}
       />
       <button className="bg-white rounded-xl w-max px-2 ">Send</button>
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          console.log("click");
+          if (process.env.NEXT_PUBLIC_API_URL) {
+            axios.get(process.env.NEXT_PUBLIC_API_URL).then(({ data }) => {
+              console.log(data);
+            });
+          }
+        }}
+        className="bg-white rounded-xl w-max px-2 "
+      >
+        Send GET
+      </button>
     </form>
   );
 }
