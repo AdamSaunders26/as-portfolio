@@ -1,5 +1,9 @@
 import { StaticImageData } from "next/image";
 import ncnews from "../../images/ncnews-mockup.jpg";
+import nc_news from "../../images/nc-news-mockup.png";
+import ncnews1 from "../../images/nc-news1.png";
+import ncnews2 from "../../images/nc-news2.png";
+import ncnews3 from "../../images/nc-news3.png";
 
 export interface ProjectType {
   key: number;
@@ -8,37 +12,30 @@ export interface ProjectType {
   alt: string;
   details: string;
 }
-export const projects: ProjectType[] = [
+
+export const NCnews: ProjectType[] = [
   {
     key: 0,
-    project: "NC News",
-    imageSrc: ncnews,
-    alt: "NC News website displayed on a laptop and phone",
+    project: "All articles",
+    imageSrc: ncnews1,
+    alt: "A view of all the articles on NC News.",
     details:
-      "0. NC News is a web app which utilises the backend API which I had already created at this point. It is an ongoing work in progress which is  still lacking some features I'd like to implement. There were many challenges that had to be faced in order to complete this task. Blah blah blah etc",
+      "NC News was the second main solo project I completed. It's a news viewing platform similar to Reddit. Users can view different posts and filter them by categories such as when they were posted and how many comments they have. I spent a lot of time styling this using pure CSS before I had discovered Tailwind but I was proud of how it turned out.",
   },
   {
     key: 1,
-    project: "NC News API",
-    imageSrc: ncnews,
-    alt: "NC News website displayed on a laptop and phone",
+    project: "Article view",
+    imageSrc: ncnews2,
+    alt: "A detailed view of an articles about Node.js on NC News.",
     details:
-      "1. NC News is a web app which utilises the backend API which I had already created at this point. It is an ongoing work in progress which is  still lacking some features I'd like to implement. There were many challenges that had to be faced in order to complete this task. Blah blah blah etc",
+      "I only had a week to create this project so time was very tight. Users are able to post comments and vote on articles but I would like to further extend this by allowing users to post their own articles and then view a profile page of all the articles they have posted. I would also love to add user account creation, potentially using Oauth2.",
   },
   {
     key: 2,
-    project: "Soundwaves",
-    imageSrc: ncnews,
-    alt: "NC News website displayed on a laptop and phone",
+    project: "Mobile view",
+    imageSrc: ncnews3,
+    alt: "Three images of NC News as viewed from a mobile, showing the main article list and a detailed article view.",
     details:
-      "2. NC News is a web app which utilises the backend API which I had already created at this point. It is an ongoing work in progress which is  still lacking some features I'd like to implement. There were many challenges that had to be faced in order to complete this task. Blah blah blah etc",
-  },
-  {
-    key: 3,
-    imageSrc: ncnews,
-    project: "Portfolio",
-    alt: "NC News website displayed on a laptop and phone",
-    details:
-      "3. NC News is a web app which utilises the backend API which I had already created at this point. It is an ongoing work in progress which is  still lacking some features I'd like to implement. There were many challenges that had to be faced in order to complete this task. Blah blah blah etc",
+      "This was the first time I used breakpoints to create a seperate mobile specific view. The project was designed with a mobile-first approach, so most of the content looks better on mobile and could use some refining on the desktop view. It was also challenging to ensure the content was still easily readable on a range of phone sizes.",
   },
 ];

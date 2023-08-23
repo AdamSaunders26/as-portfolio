@@ -15,7 +15,7 @@ export default function CarouselIndicator({
   currentProject,
 }: Props) {
   return (
-    <div className="flex flex-wrap mt-2 mx-2 justify-center items-center  col-span-11 auto-cols-max ">
+    <div className="flex flex-wrap      ">
       {projects.map(({ project, key }) => {
         return (
           <p
