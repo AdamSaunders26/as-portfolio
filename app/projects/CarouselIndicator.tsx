@@ -15,7 +15,7 @@ export default function CarouselIndicator({
   currentProject,
 }: Props) {
   return (
-    <div className="flex flex-wrap      ">
+    <div className="flex flex-wrap  justify-center    ">
       {projects.map(({ project, key }) => {
         return (
           <p

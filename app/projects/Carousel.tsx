@@ -6,18 +6,22 @@ import CarouselIndicator from "./CarouselIndicator";
 import { ProjectType } from "../data/projects";
 import { AiFillGithub } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
+import Link from "next/link";
+import { JavaScriptLogo, NodeLogo } from "../Components/SVGcomponents";
 
 interface Props {
   project: ProjectType[];
   projectName: string;
   githubURL: string;
   hostedURL: string;
+  secondGithub?: string;
 }
 
 export default function Carousel({
   project,
   projectName,
   githubURL,
+  secondGithub,
   hostedURL,
 }: Props) {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -46,16 +50,25 @@ export default function Carousel({
   useEffect(() => {
     if (carouselRef.current) {
       setMaxScrollWidth(carouselRef.current.scrollWidth);
-      setScrollSnapPoint(carouselRef.current.scrollWidth / 4);
+      setScrollSnapPoint(carouselRef.current.scrollWidth / project.length);
     }
   }, []);
   return (
-    <section className=" grid grid-cols-11  ">
+    <section className=" grid grid-cols-11 my-4 py-4 rounded-xl bg-emerald-100 ">
       <div className="col-span-11 flex flex-col sm:flex-row place-self-center gap-2 ">
-        <div className="flex items-center gap-2 text-emerald-800">
-          <AiFillGithub className="w-8 h-8" />
-          <FiExternalLink className="w-6 h-6" />
-          <h3 className="  text-2xl font-bold place-self-center mx-4 border-2 border-emerald-800 rounded-lg px-2">
+        <div className="flex items-center place-self-center gap-2 mx-4 text-emerald-800">
+          <a target="_blank" href={githubURL}>
+            <AiFillGithub className="w-8 h-8" />
+          </a>
+          {secondGithub ? (
+            <a target="_blank" href={secondGithub}>
+              <AiFillGithub className="w-8 h-8" />
+            </a>
+          ) : null}
+          <a target="_blank" href={hostedURL}>
+            <FiExternalLink className="w-6 h-6 m-1" />
+          </a>
+          <h3 className="  text-2xl font-bold place-self-center ml-4 bg-white border-2 border-emerald-800 rounded-lg px-2">
             {projectName}
           </h3>
         </div>
@@ -65,6 +78,10 @@ export default function Carousel({
           scrollSnapPoint={scrollSnapPoint}
           currentProject={currentProject}
         />
+        {/* <div>
+          <JavaScriptLogo />
+          <NodeLogo />
+        </div> */}
       </div>
       <LeftButton
         carouselRef={carouselRef}
