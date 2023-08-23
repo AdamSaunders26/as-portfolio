@@ -5,6 +5,8 @@ import {
   HTMLLogo,
   JavaScriptLogo,
   JestLogo,
+  MiniAxiosLogo,
+  MiniExpressLogo,
   NextLogo,
   NodeLogo,
   PostgreSQLLogo,
@@ -38,4 +40,32 @@ export const frontEndTechs: [string, string, JSX.Element][] = [
   ["Axios", "https://axios-http.com/", <AxiosLogo />],
   ["HTML5", "https://en.wikipedia.org/wiki/HTML", <HTMLLogo />],
   ["CSS3", "https://en.wikipedia.org/wiki/CSS", <CSSLogo />],
+];
+
+export const NCnewsAPITech = [
+  <JavaScriptLogo isCarousel={true} />,
+  <NodeLogo isCarousel={true} />,
+  <ExpressLogo isCarousel={true} />,
+  <PostgreSQLLogo isCarousel={true} />,
+  <JestLogo isCarousel={true} />,
+];
+
+export const NCnewsTech = [
+  <JavaScriptLogo isCarousel={true} />,
+  <ReactLogo isCarousel={true} />,
+  // <AxiosLogo isCarousel={true} />,
+  <CSSLogo isCarousel={true} />,
+];
+
+export const soundWavesTech = [
+  <TypeScriptLogo isCarousel={true} />,
+  <NextLogo isCarousel={true} />,
+  <ReactLogo isCarousel={true} />,
+  <TailwindLogo isCarousel={true} />,
+  // <MiniAxiosLogo isCarousel={true} />,
+  <NodeLogo isCarousel={true} />,
+  <MiniExpressLogo isCarousel={true} />,
+  <SupabaseLogo isCarousel={true} />,
+  <PostgreSQLLogo isCarousel={true} />,
+  <JestLogo isCarousel={true} />,
 ];

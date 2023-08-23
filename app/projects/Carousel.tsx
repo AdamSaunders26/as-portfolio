@@ -8,6 +8,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
 import { JavaScriptLogo, NodeLogo } from "../Components/SVGcomponents";
+import { NCnewsTech } from "../data/technologies";
 
 interface Props {
   project: ProjectType[];
@@ -15,6 +16,7 @@ interface Props {
   githubURL: string;
   hostedURL: string;
   secondGithub?: string;
+  techArray: JSX.Element[];
 }
 
 export default function Carousel({
@@ -23,6 +25,7 @@ export default function Carousel({
   githubURL,
   secondGithub,
   hostedURL,
+  techArray,
 }: Props) {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [currentProject, setCurrentProject] = useState<number>(0);
@@ -32,13 +35,13 @@ export default function Carousel({
   function handleScroll(e: React.UIEvent<HTMLDivElement, UIEvent>) {
     const currentScrollPosition = (e.target as HTMLDivElement).scrollLeft;
     switch (true) {
-      case currentScrollPosition < scrollSnapPoint:
+      case currentScrollPosition < scrollSnapPoint - 50:
         setCurrentProject(0);
         break;
-      case currentScrollPosition < scrollSnapPoint * 2:
+      case currentScrollPosition < scrollSnapPoint * 2 - 50:
         setCurrentProject(1);
         break;
-      case currentScrollPosition < scrollSnapPoint * 3:
+      case currentScrollPosition < scrollSnapPoint * 3 - 50:
         setCurrentProject(2);
         break;
       case currentScrollPosition < maxScrollWidth:
@@ -53,35 +56,42 @@ export default function Carousel({
       setScrollSnapPoint(carouselRef.current.scrollWidth / project.length);
     }
   }, []);
+
   return (
     <section className=" grid grid-cols-11 my-4 py-4 rounded-xl bg-emerald-100 ">
       <div className="col-span-11 flex flex-col sm:flex-row place-self-center gap-2 ">
-        <div className="flex items-center place-self-center gap-2 mx-4 text-emerald-800">
-          <a target="_blank" href={githubURL}>
-            <AiFillGithub className="w-8 h-8" />
-          </a>
-          {secondGithub ? (
-            <a target="_blank" href={secondGithub}>
-              <AiFillGithub className="w-8 h-8" />
-            </a>
-          ) : null}
-          <a target="_blank" href={hostedURL}>
-            <FiExternalLink className="w-6 h-6 m-1" />
-          </a>
-          <h3 className="  text-2xl font-bold place-self-center ml-4 bg-white border-2 border-emerald-800 rounded-lg px-2">
-            {projectName}
-          </h3>
+        <div className="flex flex-col ">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-0">
+            <div className="flex items-center justify-between place-self-center gap-2  text-emerald-800">
+              <a target="_blank" href={githubURL}>
+                <AiFillGithub className="w-8 h-8" />
+              </a>
+              {secondGithub ? (
+                <a target="_blank" href={secondGithub}>
+                  <AiFillGithub className="w-8 h-8" />
+                </a>
+              ) : null}
+              <a target="_blank" href={hostedURL}>
+                <FiExternalLink className="w-6 h-6 m-1" />
+              </a>
+              <h3 className="  text-2xl font-bold place-self-center  bg-white border-2 border-emerald-800 rounded-lg px-2">
+                {projectName}
+              </h3>
+            </div>
+            <CarouselIndicator
+              carouselRef={carouselRef}
+              projects={project}
+              scrollSnapPoint={scrollSnapPoint}
+              currentProject={currentProject}
+              setCurrentProject={setCurrentProject}
+            />
+          </div>
+          <div className="flex flex-wrap gap-2 justify-center mt-2">
+            {techArray.map((logo) => {
+              return logo;
+            })}
+          </div>
         </div>
-        <CarouselIndicator
-          carouselRef={carouselRef}
-          projects={project}
-          scrollSnapPoint={scrollSnapPoint}
-          currentProject={currentProject}
-        />
-        {/* <div>
-          <JavaScriptLogo />
-          <NodeLogo />
-        </div> */}
       </div>
       <LeftButton
         carouselRef={carouselRef}

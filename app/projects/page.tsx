@@ -2,6 +2,11 @@
 
 import Carousel from "./Carousel";
 import { NCnews, NCnewsAPI, SoundWaves } from "../data/projects";
+import {
+  NCnewsAPITech,
+  NCnewsTech,
+  soundWavesTech,
+} from "../data/technologies";
 
 export default function CarouselPage() {
   return (
@@ -19,12 +24,14 @@ export default function CarouselPage() {
         projectName="NC News API"
         githubURL="https://github.com/AdamSaunders26/nc-news-backendProject"
         hostedURL="https://nc-news-app.onrender.com/api"
+        techArray={NCnewsAPITech}
       />
       <Carousel
         project={NCnews}
         projectName="NC News"
         githubURL="https://github.com/AdamSaunders26/fe-nc-news"
         hostedURL="https://adam-saunders-front-end-project.netlify.app/"
+        techArray={NCnewsTech}
       />
       <Carousel
         project={SoundWaves}
@@ -32,6 +39,7 @@ export default function CarouselPage() {
         githubURL="https://github.com/AdamSaunders26/as-front-end-sound-waves"
         secondGithub="https://github.com/AdamSaunders26/back-end-sound-waves"
         hostedURL="https://aa-sound-waves.vercel.app/"
+        techArray={soundWavesTech}
       />
     </main>
   );
