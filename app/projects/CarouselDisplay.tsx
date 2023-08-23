@@ -33,6 +33,7 @@ export default function CarouselDisplay({
                 src={imageSrc}
                 alt={alt}
                 priority={true}
+                placeholder="blur"
               />
               {project === "Login Page" ? (
                 <p className="text-red-500 p-2">

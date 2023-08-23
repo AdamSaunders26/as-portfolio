@@ -45,7 +45,7 @@ export const frontEndTechs: [string, string, JSX.Element][] = [
 export const NCnewsAPITech = [
   <JavaScriptLogo isCarousel={true} />,
   <NodeLogo isCarousel={true} />,
-  <ExpressLogo isCarousel={true} />,
+  <MiniExpressLogo isCarousel={true} />,
   <PostgreSQLLogo isCarousel={true} />,
   <JestLogo isCarousel={true} />,
 ];

@@ -5,15 +5,15 @@ import profilePic from "/images/profilepic.jpg";
 
 export default function Home() {
   return (
-    <main className="container mx-auto grid grid-cols-1 items-center  sm:grid-cols-2">
+    <main className="mx-4  grid grid-cols-1 items-center  sm:grid-cols-2">
       <Image
-        className="rounded-xl max-w-[22rem] w-auto max-h-80 my-8 sm:max-h-[28rem] place-self-center shadow-lg object-contain"
+        className="rounded-xl max-w-[22rem] w-auto max-h-80 my-8 sm:max-h-[28rem] place-self-center object-contain"
         src={profilePic}
         priority={true}
         placeholder="blur"
         alt="Adam and his wife smiling along the coast of Crete"
       />
-      <article className="place-self-center p-4 shadow-lg  mx-4 rounded-lg bg-emerald-100 sm:mt-4">
+      <article className="place-self-center p-4  mx-4 rounded-lg bg-emerald-100 sm:mt-4">
         <span className="font-extrabold text-red-600">
           CURRENTLY A WORK IN PROGRESS, MANY FEATURES ARE NOT YET IMPLEMENTED OR
           MAY CONTAIN BUGS.
