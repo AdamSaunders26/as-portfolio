@@ -10,7 +10,7 @@ import {
 
 export default function CarouselPage() {
   return (
-    <main className="mx-4 mt-14">
+    <main className="mx-4 sm:mx-0 mt-24 sm:mt-14">
       <h2 className="text-2xl mx-2 my-2 font-bold text-sky-700">Projects</h2>
       <p className="mx-2 ">
         These are all the projects that are complete enough to share and

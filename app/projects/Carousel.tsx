@@ -6,9 +6,6 @@ import CarouselIndicator from "./CarouselIndicator";
 import { ProjectType } from "../data/projects";
 import { AiFillGithub } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
-import Link from "next/link";
-import { JavaScriptLogo, NodeLogo } from "../Components/SVGcomponents";
-import { NCnewsTech } from "../data/technologies";
 
 interface Props {
   project: ProjectType[];
@@ -58,8 +55,8 @@ export default function Carousel({
   }, []);
 
   return (
-    <section className=" grid grid-cols-11 my-4 py-4 rounded-md bg-white ">
-      <div className="col-span-11 flex flex-col sm:flex-row place-self-center gap-2 ">
+    <section className=" grid grid-cols-12 my-4 py-4 rounded-md bg-white ">
+      <div className="col-span-12 flex flex-col sm:flex-row place-self-center gap-2 ">
         <div className="flex flex-col ">
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-0">
             <div className="flex items-center justify-between place-self-center gap-2  text-sky-700">

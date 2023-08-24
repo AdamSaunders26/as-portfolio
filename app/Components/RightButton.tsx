@@ -7,14 +7,14 @@ interface Props {
 export default function RightButton({ carouselRef, setCurrentProject }: Props) {
   return (
     <div
-      className="place-self-center text-sky-600 active:text-sky-800 active:scale-75"
+      className="place-self-center text-sky-600 active:text-sky-800 active:scale-75  "
       onClick={() => {
         if (carouselRef.current) {
           carouselRef.current.scrollLeft += 525;
         }
       }}
     >
-      <BiRightArrow className="h-8 w-8 sm:h-12 sm:w-12 " />
+      <BiRightArrow className="h-4 w-4 sm:h-12 sm:w-12 " />
     </div>
   );
 }

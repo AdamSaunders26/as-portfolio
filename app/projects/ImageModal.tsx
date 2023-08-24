@@ -16,7 +16,7 @@ export default function ImageModal({ imageSrc, alt, setModalOpen }: Props) {
           onClick={() => {
             setModalOpen((curr) => !curr);
           }}
-          className="m-2 w-8 h-8  bg-black bg-opacity-50 p-1 rounded-full text-white absolute z-30 top-0 right-0 hover:cursor-pointer"
+          className="m-2 w-8 h-8  bg-black bg-opacity-50 p-1 rounded-full text-white absolute z-50 top-0 right-0 hover:cursor-pointer"
         />
         <Image
           className="absolute top-1/2 left-1/2 z-40  object-contain overflow-hidden max-w-[98%] max-h-[98%]  opacity-100 -translate-x-1/2 -translate-y-1/2 hover:cursor-pointer"

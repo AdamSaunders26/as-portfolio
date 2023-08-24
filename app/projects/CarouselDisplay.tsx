@@ -20,15 +20,14 @@ export default function CarouselDisplay({
       onScroll={(e) => {
         handleScroll(e);
       }}
-      className=" px-4 col-span-9 flex mt-2 overflow-x-scroll snap-mandatory snap-x scroll-smooth "
+      className="  col-span-10 col-start-2 sm:col-span-10 flex mt-2 overflow-x-scroll snap-mandatory snap-x scroll-smooth "
     >
-      {projects.map(({ key, imageSrc, alt, details, project }) => {
+      {projects.map(({ key, imageSrc, alt, details, project }, index) => {
         const [modalOpen, setModalOpen] = useState(false);
+
+        const projectClass = " snap-center basis-1/4 shrink-0 relative ";
         return (
-          <div
-            className={" snap-center basis-1/4 shrink-0 relative mx-10"}
-            key={key}
-          >
+          <div className={projectClass} key={key}>
             {modalOpen ? (
               <ImageModal
                 imageSrc={imageSrc}
@@ -36,9 +35,13 @@ export default function CarouselDisplay({
                 setModalOpen={setModalOpen}
               />
             ) : null}
-            <div className={"w-72 sm:w-[26rem] md:w-[32rem] lg:w-[46rem] "}>
+            <div
+              className={
+                "w-72 sm:w-[26rem] md:w-[32rem] lg:w-[46rem] rounded-md border-sky-600 border mx-2 mb-2"
+              }
+            >
               <Image
-                className="p-2  hover:cursor-pointer"
+                className=" border-8 border-transparent rounded-xl hover:cursor-pointer"
                 src={imageSrc}
                 alt={alt}
                 priority={true}
@@ -54,7 +57,7 @@ export default function CarouselDisplay({
                   devices to an issue with the way they handle audio
                 </p>
               ) : null}
-              <p className="bg-white rounded-lg p-2 my-2">{details}</p>
+              <p className=" p-2  ">{details}</p>
             </div>
           </div>
         );
