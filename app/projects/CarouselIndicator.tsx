@@ -27,9 +27,9 @@ export default function CarouselIndicator({
                 carouselRef.current.scrollLeft = scrollSnapPoint * key;
               }
             }}
-            className={` text-center align-middle ml-2 py-1 px-2 font-semibold text-neutral-700 rounded-lg hover:cursor-pointer  ${
+            className={` text-center place-self-center ml-2  px-2 font-semibold text-neutral-700 rounded-md hover:cursor-pointer  ${
               currentProject === key
-                ? " bg-emerald-800  text-white"
+                ? " bg-emerald-800  text-white font-light"
                 : " hover:bg-emerald-300"
             }`}
           >

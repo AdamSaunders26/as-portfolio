@@ -6,7 +6,7 @@ export default function Header() {
   const pathname = usePathname();
 
   const linkClass =
-    "hover:underline text-center rounded-lg px-2  active:text-emerald-700 place-self-center sm:place-self-end ";
+    "hover:underline text-center rounded-md px-2  active:text-emerald-700 place-self-center sm:place-self-end ";
 
   return (
     <header className="flex flex-col mt-2 px-2 justify-between items-center font-semibold text-neutral-700  border-b-2 border-emerald-500 sm:flex-row">
@@ -18,7 +18,8 @@ export default function Header() {
       <div className="flex my-2  gap-2 ">
         <div
           className={
-            linkClass + (pathname === "/" ? " bg-emerald-800 text-white" : "")
+            linkClass +
+            (pathname === "/" ? " bg-emerald-800 text-white font-light" : "")
           }
         >
           <Link href="/">
@@ -28,7 +29,9 @@ export default function Header() {
         <div
           className={
             linkClass +
-            (pathname === "/projects" ? " bg-emerald-800 text-white" : "")
+            (pathname === "/projects"
+              ? " bg-emerald-800 text-white font-light"
+              : "")
           }
         >
           <Link href="/projects">
@@ -38,7 +41,9 @@ export default function Header() {
         <div
           className={
             linkClass +
-            (pathname === "/technologies" ? " bg-emerald-800 text-white" : "")
+            (pathname === "/technologies"
+              ? " bg-emerald-800 text-white font-light"
+              : "")
           }
         >
           <Link href="/technologies">
@@ -48,7 +53,9 @@ export default function Header() {
         <div
           className={
             linkClass +
-            (pathname === "/contact" ? " bg-emerald-800 text-white" : "")
+            (pathname === "/contact"
+              ? " bg-emerald-800 text-white font-light"
+              : "")
           }
         >
           <Link href="/contact">

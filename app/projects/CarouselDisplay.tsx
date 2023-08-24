@@ -14,7 +14,6 @@ export default function CarouselDisplay({
   projects,
   handleScroll,
 }: Props) {
-  const imageClass = "p-2 ";
   return (
     <div
       ref={carouselRef}
@@ -37,13 +36,9 @@ export default function CarouselDisplay({
                 setModalOpen={setModalOpen}
               />
             ) : null}
-            <div
-              className={
-                "w-72 sm:w-[26rem] md:w-[32rem] lg:w-[46rem] hover:cursor-pointer "
-              }
-            >
+            <div className={"w-72 sm:w-[26rem] md:w-[32rem] lg:w-[46rem] "}>
               <Image
-                className={imageClass}
+                className="p-2  hover:cursor-pointer"
                 src={imageSrc}
                 alt={alt}
                 priority={true}

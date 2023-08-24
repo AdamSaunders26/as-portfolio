@@ -87,7 +87,7 @@ export default function ContactPage() {
         });
     }
   }
-  const inputClass = "rounded-lg p-2 mb-4 mt-2 border font-normal";
+  const inputClass = "rounded-md p-2 mb-4 mt-2 border-2 font-normal";
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
   return (
@@ -97,12 +97,12 @@ export default function ContactPage() {
       </h2>
       <p className="mx-2">
         Feel free to drop me a message about anything at all! I'm currently
-        looking for work so defintely get in touch if you think I would be a
+        looking for work so definitely get in touch if you think I would be a
         good fit at your company. I'd also love to know if you spot any bugs on
         this website or any of my projects so I can learn how to improve!
       </p>
       <form
-        className="bg-emerald-100 flex flex-col m-2  text-neutral-700 font-semibold p-2 rounded-xl "
+        className="bg-emerald-100 flex flex-col m-2  text-neutral-700 font-semibold p-2 rounded-md "
         onSubmit={handleSubmit}
       >
         {isError ? (
@@ -163,7 +163,7 @@ export default function ContactPage() {
         <div className="flex gap-4 mx-2">
           <button
             disabled={isSubmitting}
-            className="bg-white rounded-xl w-max h-max ont-semibold gap-2 p-2 text-xl text-emerald-800 border-2  mb-2 border-emerald-800 flex  items-center hover:bg-neutral-200 active:bg-emerald-800 active:text-white "
+            className="bg-white rounded-md w-max h-max ont-semibold gap-2 p-2 text-xl text-emerald-800 border-2  mb-2 border-emerald-800 flex  items-center hover:bg-neutral-200 active:bg-emerald-800 active:text-white "
           >
             {isSubmitting ? "Submitting" : "Send"}
             <span className={isSubmitting ? "animate-spin" : ""}>
