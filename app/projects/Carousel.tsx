@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import LeftButton from "../Components/LeftButton";
 import RightButton from "../Components/RightButton";
 import CarouselDisplay from "./CarouselDisplay";
@@ -87,8 +87,8 @@ export default function Carousel({
             />
           </div>
           <div className="flex flex-wrap gap-2 justify-center mt-2">
-            {techArray.map((logo) => {
-              return logo;
+            {techArray.map((logo, index) => {
+              return <React.Fragment key={index}>{logo}</React.Fragment>;
             })}
           </div>
         </div>

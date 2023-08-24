@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { RefObject } from "react";
+import { RefObject, useState } from "react";
 import { ProjectType } from "../data/projects";
+import ImageModal from "./imageModal";
 
 interface Props {
   carouselRef: RefObject<HTMLDivElement>;
@@ -13,6 +14,9 @@ export default function CarouselDisplay({
   projects,
   handleScroll,
 }: Props) {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const imageClass = "p-2 ";
   return (
     <div
       ref={carouselRef}
@@ -27,13 +31,24 @@ export default function CarouselDisplay({
             className={" snap-center basis-1/4 shrink-0 relative mx-10"}
             key={key}
           >
+            {modalOpen ? (
+              <ImageModal
+                imageSrc={imageSrc}
+                alt={alt}
+                setModalOpen={setModalOpen}
+              />
+            ) : null}
             <div className={"w-72 sm:w-[26rem] md:w-[32rem] lg:w-[46rem] "}>
               <Image
-                className="p-2 "
+                className={imageClass}
                 src={imageSrc}
                 alt={alt}
                 priority={true}
                 placeholder="blur"
+                onClick={() => {
+                  setModalOpen((curr) => !curr);
+                  console.log("modal");
+                }}
               />
               {project === "Login Page" ? (
                 <p className="text-red-500 p-2">
