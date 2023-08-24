@@ -14,8 +14,6 @@ export default function CarouselDisplay({
   projects,
   handleScroll,
 }: Props) {
-  const [modalOpen, setModalOpen] = useState(false);
-
   const imageClass = "p-2 ";
   return (
     <div
@@ -26,6 +24,7 @@ export default function CarouselDisplay({
       className=" px-4 col-span-9 flex mt-2 overflow-x-scroll snap-mandatory snap-x scroll-smooth "
     >
       {projects.map(({ key, imageSrc, alt, details, project }) => {
+        const [modalOpen, setModalOpen] = useState(false);
         return (
           <div
             className={" snap-center basis-1/4 shrink-0 relative mx-10"}
@@ -38,7 +37,11 @@ export default function CarouselDisplay({
                 setModalOpen={setModalOpen}
               />
             ) : null}
-            <div className={"w-72 sm:w-[26rem] md:w-[32rem] lg:w-[46rem] "}>
+            <div
+              className={
+                "w-72 sm:w-[26rem] md:w-[32rem] lg:w-[46rem] hover:cursor-pointer "
+              }
+            >
               <Image
                 className={imageClass}
                 src={imageSrc}

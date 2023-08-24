@@ -33,14 +33,14 @@ export const NCnews: ProjectType[] = [
     details:
       "I only had a week to create this project so time was very tight. Users are able to post comments and vote on articles but I would like to further extend this by allowing users to post their own articles and then view a profile page of all the articles they have posted. I would also love to add user account creation, potentially using Oauth2.",
   },
-  // {
-  //   key: 2,
-  //   project: "Mobile view",
-  //   imageSrc: ncnews3,
-  //   alt: "Three images of NC News as viewed from a mobile, showing the main article list and a detailed article view.",
-  //   details:
-  //     "This was the first time I used breakpoints to create a seperate mobile specific view. The project was designed with a mobile-first approach, so most of the content looks better on mobile and could use some refining on the desktop view. It was also challenging to ensure the content was still easily readable on a range of phone sizes.",
-  // },
+  {
+    key: 2,
+    project: "Mobile view",
+    imageSrc: ncnews3,
+    alt: "Three images of NC News as viewed from a mobile, showing the main article list and a detailed article view.",
+    details:
+      "This was the first time I used breakpoints to create a seperate mobile specific view. The project was designed with a mobile-first approach, so most of the content looks better on mobile and could use some refining on the desktop view. It was also challenging to ensure the content was still easily readable on a range of phone sizes.",
+  },
 ];
 
 export const NCnewsAPI: ProjectType[] = [

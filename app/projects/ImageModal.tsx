@@ -8,6 +8,7 @@ interface Props {
   setModalOpen: Dispatch<SetStateAction<boolean>>;
 }
 export default function ImageModal({ imageSrc, alt, setModalOpen }: Props) {
+  console.log(alt);
   return (
     <div className="fixed z-10 w-full h-full left-0 top-0 bg-black bg-opacity-60 block overflow-hidden">
       <div className=" ">
