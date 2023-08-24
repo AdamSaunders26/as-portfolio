@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { RefObject, useState } from "react";
 import { ProjectType } from "../data/projects";
-import ImageModal from "./imageModal";
+import ImageModal from "./ImageModal";
 
 interface Props {
   carouselRef: RefObject<HTMLDivElement>;
@@ -47,7 +47,7 @@ export default function CarouselDisplay({
                 placeholder="blur"
                 onClick={() => {
                   setModalOpen((curr) => !curr);
-                  console.log("modal");
+                  console.log({ alt });
                 }}
               />
               {project === "Login Page" ? (
