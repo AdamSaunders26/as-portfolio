@@ -10,10 +10,8 @@ import {
 
 export default function CarouselPage() {
   return (
-    <main className="mx-4 ">
-      <h2 className="text-2xl mx-2 my-2 font-bold text-emerald-800">
-        Projects
-      </h2>
+    <main className="mx-4 mt-14">
+      <h2 className="text-2xl mx-2 my-2 font-bold text-sky-700">Projects</h2>
       <p className="mx-2 ">
         These are all the projects that are complete enough to share and
         display. There are many mini-apps that I have also worked but, but I

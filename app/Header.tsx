@@ -6,12 +6,12 @@ export default function Header() {
   const pathname = usePathname();
 
   const linkClass =
-    "hover:underline text-center rounded-md px-2  active:text-emerald-700 place-self-center sm:place-self-end ";
+    "hover:underline text-center rounded-md px-2 text-lg active:text-emerald-700 place-self-center sm:place-self-end ";
 
   return (
-    <header className="flex flex-col mt-2 px-2 justify-between items-center font-semibold text-neutral-700  border-b-2 border-emerald-500 sm:flex-row">
+    <header className="flex flex-col px-4 py-2 justify-between items-center font-semibold bg-white w-screen left-0 top-0 fixed z-20  text-neutral-700  border-b-2 border-sky-600 sm:flex-row">
       <div>
-        <h1 className="font-bold text-3xl mx-4 text-center sm:text-2xl lg:text-3xl text-emerald-800">
+        <h1 className="font-bold text-3xl mx-4 text-center sm:text-2xl lg:text-3xl text-sky-700">
           Adam Saunders
         </h1>
       </div>
@@ -19,7 +19,7 @@ export default function Header() {
         <div
           className={
             linkClass +
-            (pathname === "/" ? " bg-emerald-800 text-white font-light" : "")
+            (pathname === "/" ? " bg-sky-600 text-white font-light" : "")
           }
         >
           <Link href="/">
@@ -30,7 +30,7 @@ export default function Header() {
           className={
             linkClass +
             (pathname === "/projects"
-              ? " bg-emerald-800 text-white font-light"
+              ? "  bg-sky-600 text-white font-light"
               : "")
           }
         >
@@ -42,7 +42,7 @@ export default function Header() {
           className={
             linkClass +
             (pathname === "/technologies"
-              ? " bg-emerald-800 text-white font-light"
+              ? " bg-sky-600 text-white font-light"
               : "")
           }
         >
@@ -53,9 +53,7 @@ export default function Header() {
         <div
           className={
             linkClass +
-            (pathname === "/contact"
-              ? " bg-emerald-800 text-white font-light"
-              : "")
+            (pathname === "/contact" ? " bg-sky-600 text-white font-light" : "")
           }
         >
           <Link href="/contact">

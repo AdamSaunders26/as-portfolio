@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cabin.className}>
-      <body className="bg-white h-screen container mx-auto flex flex-col ">
+      <body className="bg-neutral-200 h-screen container mx-auto flex flex-col ">
         <Header />
         {children}
       </body>

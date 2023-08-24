@@ -29,8 +29,8 @@ export default function CarouselIndicator({
             }}
             className={` text-center place-self-center ml-2  px-2 font-semibold text-neutral-700 rounded-md hover:cursor-pointer  ${
               currentProject === key
-                ? " bg-emerald-800  text-white font-light"
-                : " hover:bg-emerald-300"
+                ? " bg-sky-600  text-white font-light"
+                : " hover:bg-sky-100"
             }`}
           >
             {project}

@@ -58,11 +58,11 @@ export default function Carousel({
   }, []);
 
   return (
-    <section className=" grid grid-cols-11 my-4 py-4 rounded-md bg-emerald-100 ">
+    <section className=" grid grid-cols-11 my-4 py-4 rounded-md bg-white ">
       <div className="col-span-11 flex flex-col sm:flex-row place-self-center gap-2 ">
         <div className="flex flex-col ">
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-0">
-            <div className="flex items-center justify-between place-self-center gap-2  text-emerald-800">
+            <div className="flex items-center justify-between place-self-center gap-2  text-sky-700">
               <a target="_blank" href={githubURL}>
                 <AiFillGithub className="w-8 h-8" />
               </a>
@@ -74,7 +74,7 @@ export default function Carousel({
               <a target="_blank" href={hostedURL}>
                 <FiExternalLink className="w-6 h-6 m-1" />
               </a>
-              <h3 className="  text-2xl font-bold place-self-center  bg-white border-2 border-emerald-800 rounded-md px-2">
+              <h3 className="  text-2xl font-bold place-self-center  bg-white border-2 border-sky-600 rounded-md px-2">
                 {projectName}
               </h3>
             </div>

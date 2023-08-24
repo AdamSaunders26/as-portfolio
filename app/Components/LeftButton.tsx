@@ -7,7 +7,7 @@ interface Props {
 export default function LeftButton({ carouselRef, setCurrentProject }: Props) {
   return (
     <div
-      className="place-self-center text-emerald-800 active:text-emerald-900 active:scale-75"
+      className="place-self-center text-sky-600 active:text-sky-800 active:scale-75"
       onClick={() => {
         if (carouselRef.current) {
           carouselRef.current.scrollLeft -= 525;
