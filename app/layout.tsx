@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Quicksand, Oxygen, Cabin } from "next/font/google";
 import Header from "./Header";
+import { useContext, useState } from "react";
+import DarkModeHTML from "./DarkModeHTML";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 const oxygen = Oxygen({ weight: "400", subsets: ["latin"] });
@@ -17,12 +19,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en" className={cabin.className}>
-      <body className="bg-neutral-200 h-screen container mx-auto flex flex-col ">
-        <Header />
-        {children}
-      </body>
-    </html>
-  );
+  return <DarkModeHTML font={cabin}>{children}</DarkModeHTML>;
 }
