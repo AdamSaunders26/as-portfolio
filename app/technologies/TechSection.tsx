@@ -7,8 +7,8 @@ interface Props {
 
 export default function TechSection({ sectionName, techArray }: Props) {
   return (
-    <section className="my-2 mx-2 p-2 rounded-md bg-emerald-100">
-      <h2 className="mx-2 font-semibold text-emerald-800">{sectionName}</h2>
+    <section className="my-2 mx-2 p-2 rounded-md bg-white">
+      <h2 className="mx-2 font-semibold text-sky-700">{sectionName}</h2>
       <div className="flex flex-wrap justify-around">
         {techArray.map(([name, link, logo]) => {
           return (

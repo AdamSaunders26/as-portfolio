@@ -8,6 +8,8 @@ interface Props {
     target: EventTarget;
   }>;
   inputClass: string;
+  errorClass: string;
+  validClass: string;
   validEmail?: boolean;
   setSubmitSuccess: Dispatch<SetStateAction<boolean>>;
 }
@@ -17,6 +19,8 @@ export default function ContactFormInput({
   inputName,
   setFormData,
   inputClass,
+  errorClass,
+  validClass,
   validEmail = true,
   setSubmitSuccess,
 }: Props) {
@@ -46,11 +50,7 @@ export default function ContactFormInput({
         }}
         value={inputType ? inputType : ""}
         className={
-          inputType === ""
-            ? inputClass +
-              " border-red-500 focus:outline-none focus:ring focus:ring-red-500"
-            : inputClass +
-              " border-emerald-800 focus:outline-none focus:ring focus:ring-emerald-800 "
+          inputType === "" ? inputClass + errorClass : inputClass + validClass
         }
       />
     </div>
