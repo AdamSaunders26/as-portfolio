@@ -86,7 +86,8 @@ export default function ContactPage() {
         });
     }
   }
-  const inputClass = "rounded-md p-2 mb-4 mt-2 border-2 font-normal";
+  const inputClass =
+    "rounded-md p-2 mb-4 mt-2 border-2 font-normal dark:bg-neutral-900";
   const errorClass =
     " border-red-500 focus:outline-none focus:ring focus:ring-red-500 ";
   const validClass =
@@ -94,9 +95,9 @@ export default function ContactPage() {
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   const logoClass = "flex items-center mt-2 sm:mt-4  sm:w-max";
   return (
-    <main className="flex flex-col sm:flex-row  m-2 mt-24 sm:mt-16  text-neutral-700">
+    <main className="flex flex-col sm:flex-row  m-2 mt-24 sm:mt-16  ">
       <div>
-        <h2 className="text-2xl my-2 mx-2 sm:mx-0 font-bold text-sky-700">
+        <h2 className="text-2xl my-2 mx-2 sm:mx-0 font-bold text-sky-700 dark:text-sky-500">
           Get in touch!
         </h2>
         <p className="mx-2 sm:mx-0">
@@ -108,7 +109,7 @@ export default function ContactPage() {
         <p className="mx-2 sm:mx-0">
           You can also find me on these sites or send me an email directly.
         </p>
-        <ul className="mx-4 sm:mx-0  flex justify-between sm:flex-col text-sky-700 font-semibold text-lg">
+        <ul className="mx-4 sm:mx-0  flex justify-between sm:flex-col text-sky-700 dark:text-sky-500 font-semibold text-lg">
           <li>
             <a
               className={logoClass}
@@ -149,7 +150,7 @@ export default function ContactPage() {
         </ul>
       </div>
       <form
-        className="bg-white flex flex-col m-2 my-4  min-w-[50%] text-neutral-700 font-semibold p-2 rounded-md "
+        className="bg-white dark:bg-black flex flex-col m-2 my-4  min-w-[50%]  dark:font-light font-semibold p-2 rounded-md "
         onSubmit={handleSubmit}
       >
         {isError ? (
@@ -171,7 +172,7 @@ export default function ContactPage() {
             htmlFor="Message"
             className={formData.Message === "" ? "text-red-500" : ""}
           >
-            <span className="text-neutral-700">Message:</span>
+            <span className="">Message:</span>
             {formData.Message === ""
               ? ` Please provide a message before submitting.`
               : null}
@@ -214,7 +215,7 @@ export default function ContactPage() {
         <div className="flex gap-4 mx-2">
           <button
             disabled={isSubmitting}
-            className="bg-white rounded-md w-max h-max ont-semibold gap-2 p-2 text-xl text-sky-700 border-2  mb-2 border-sky-600 flex  items-center hover:bg-neutral-200 active:bg-sky-600 active:text-white "
+            className="bg-white dark:bg-black rounded-md w-max h-max ont-semibold gap-2 p-2 text-xl text-sky-700 dark:text-sky-500 border-2  mb-2 border-sky-600 dark:border-sky-500 flex  items-center hover:bg-neutral-200 dark:hover:bg-neutral-900 active:bg-sky-600 active:text-white dark:active:bg-sky-500 dark:active:text-black"
           >
             {isSubmitting ? "Submitting" : "Send"}
             <span className={isSubmitting ? "animate-spin" : ""}>

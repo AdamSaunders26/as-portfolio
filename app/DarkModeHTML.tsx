@@ -19,14 +19,6 @@ export default function DarkModeHTML({ font, children }: Props) {
       <body className="bg-neutral-200 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 h-screen container mx-auto flex flex-col ">
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         {children}
-        <p
-          className="text-red-500"
-          onClick={() => {
-            setDarkMode((curr) => !curr);
-          }}
-        >
-          Dark
-        </p>
       </body>
     </html>
   );

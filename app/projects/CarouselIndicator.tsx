@@ -27,10 +27,10 @@ export default function CarouselIndicator({
                 carouselRef.current.scrollLeft = scrollSnapPoint * key;
               }
             }}
-            className={` text-center place-self-center ml-2  px-2 font-semibold text-neutral-700 rounded-md hover:cursor-pointer  ${
+            className={` text-center place-self-center ml-2  px-2 font-semibold  rounded-md hover:cursor-pointer  ${
               currentProject === key
-                ? " bg-sky-600  text-white font-light"
-                : " hover:bg-sky-100"
+                ? " bg-sky-600 dark:bg-sky-500 text-white dark:text-black font-light"
+                : " hover:bg-sky-100 hover:dark:bg-sky-900"
             }`}
           >
             {project}

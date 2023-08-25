@@ -32,7 +32,7 @@ export default function ContactFormInput({
         htmlFor={inputName}
         className={inputType === "" ? "text-red-500" : ""}
       >
-        <span className="text-neutral-700">{inputName}:</span>
+        <span className="">{inputName}:</span>
         {inputType === ""
           ? ` Please provide a ${inputName.toLowerCase()} before submitting.`
           : null}

@@ -5,7 +5,7 @@ import profilePic from "/images/profilepic.jpg";
 
 export default function Home() {
   return (
-    <main className="mx-4 dark:text-neutral-200 mt-24 sm:mt-14 grid grid-cols-1 items-center  sm:grid-cols-2">
+    <main className="mx-4  mt-24 sm:mt-14 grid grid-cols-1 items-center  sm:grid-cols-2">
       <Image
         className="rounded-md max-w-[22rem] w-auto max-h-80 my-8 sm:max-h-[28rem] place-self-center object-contain"
         src={profilePic}
