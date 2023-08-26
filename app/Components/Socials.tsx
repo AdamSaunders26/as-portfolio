@@ -1,19 +1,21 @@
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsFiletypePdf } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 
-export default function Socials({
-  horizontal = false,
-}: {
+interface Props {
   horizontal?: boolean;
-}) {
-  const logoClass = "flex items-center mt-2 sm:mt-4  sm:w-max";
+  cv?: boolean;
+}
+
+export default function Socials({ horizontal = false, cv = false }: Props) {
   const listClass =
-    "mx-4 my-2 sm:mx-0  flex justify-between   text-sky-700 dark:text-sky-500 font-semibold text-lg";
+    "mx-4 my-2 sm:mx-0  flex flex-wrap  justify-center gap-2   text-sky-700 dark:text-sky-500 font-semibold text-lg";
+  const logoClass =
+    "flex items-center mt-2  text-sm sm:text-base sm:mt-4 sm:ml-4 sm:w-max";
   return (
     <ul
       className={
         horizontal
-          ? listClass + " sm:flex-row sm:justify-center sm:gap-4 sm:col-span-2"
+          ? listClass + " sm:flex-row sm:justify-around sm:gap-0 sm:col-span-2"
           : listClass + " sm:flex-col "
       }
     >
@@ -35,6 +37,13 @@ export default function Socials({
           <BsGithub className="w-8 h-8 mr-2 text-sky-600" /> Github
         </a>
       </li>
+      {cv ? (
+        <li>
+          <a className={logoClass} target="_blank" href="AdamSaunders-CV.pdf">
+            <BsFiletypePdf className="w-8 h-8 mr-2 text-sky-600" /> CV
+          </a>
+        </li>
+      ) : null}
       <li>
         <a
           className={logoClass + " hidden sm:flex"}
@@ -47,7 +56,7 @@ export default function Socials({
       </li>
       <li>
         <a
-          className={logoClass + " sm:hidden "}
+          className={logoClass + " sm:hidden"}
           target="_blank"
           href="mailto:contact@adam-saunders.dev"
         >

@@ -9,7 +9,6 @@ export default function Home() {
     <main className=" mx-4  mt-24 sm:mt-16 grid grid-cols-1 items-center  sm:grid-cols-2">
       <div className="flex flex-col mb-2  mx-4">
         <Image
-          // className="rounded-full  w-auto 0 my-4 sm:max-h-[36rem] place-self-center object-contain"
           className="rounded-full  w-64 h-64 0 my-4 sm:max-h-[36rem] place-self-center object-cover"
           src={profilePic}
           priority={true}
@@ -39,7 +38,7 @@ export default function Home() {
           effectively, being reflective and building relationships.
         </p>
       </article>
-      <Socials horizontal={true} />
+      <Socials horizontal={true} cv={true} />
     </main>
   );
 }
