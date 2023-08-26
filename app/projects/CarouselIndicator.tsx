@@ -16,8 +16,11 @@ export default function CarouselIndicator({
   currentProject,
   setCurrentProject,
 }: Props) {
+  const currentTabClass =
+    " bg-sky-600 dark:bg-sky-500 text-white dark:text-black font-light";
+  const notCurrentTabClass = " hover:bg-sky-100 hover:dark:bg-sky-900";
   return (
-    <div className="flex flex-wrap  justify-center    ">
+    <div className="flex flex-wrap  justify-center ">
       {projects.map(({ project, key }) => {
         return (
           <p
@@ -28,9 +31,7 @@ export default function CarouselIndicator({
               }
             }}
             className={` text-center place-self-center ml-2  px-2 font-semibold  rounded-md hover:cursor-pointer  ${
-              currentProject === key
-                ? " bg-sky-600 dark:bg-sky-500 text-white dark:text-black font-light"
-                : " hover:bg-sky-100 hover:dark:bg-sky-900"
+              currentProject === key ? currentTabClass : notCurrentTabClass
             }`}
           >
             {project}

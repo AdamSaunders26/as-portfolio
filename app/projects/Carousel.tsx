@@ -31,6 +31,12 @@ export default function Carousel({
 
   function handleScroll(e: React.UIEvent<HTMLDivElement, UIEvent>) {
     const currentScrollPosition = (e.target as HTMLDivElement).scrollLeft;
+    console.log({ currentScrollPosition });
+    console.log({ maxScrollWidth });
+    console.log({ scrollSnapPoint });
+    console.log({ currentProject });
+    console.log(project.length);
+    console.log(carouselRef.current?.scrollWidth);
     switch (true) {
       case currentScrollPosition < scrollSnapPoint - 50:
         setCurrentProject(0);
@@ -49,10 +55,13 @@ export default function Carousel({
 
   useEffect(() => {
     if (carouselRef.current) {
+      console.log(carouselRef.current.scrollWidth * 0.79);
       setMaxScrollWidth(carouselRef.current.scrollWidth);
-      setScrollSnapPoint(carouselRef.current.scrollWidth / project.length);
+      setScrollSnapPoint(
+        (carouselRef.current.scrollWidth * 0.79) / project.length
+      );
     }
-  }, []);
+  }, [carouselRef.current?.scrollWidth]);
 
   return (
     <section className=" grid grid-cols-12 my-4 py-4 rounded-md bg-white dark:bg-black ">
@@ -93,6 +102,7 @@ export default function Carousel({
       <LeftButton
         carouselRef={carouselRef}
         setCurrentProject={setCurrentProject}
+        scrollSnapPoint={scrollSnapPoint}
       />
       <CarouselDisplay
         carouselRef={carouselRef}
@@ -102,6 +112,7 @@ export default function Carousel({
       <RightButton
         carouselRef={carouselRef}
         setCurrentProject={setCurrentProject}
+        scrollSnapPoint={scrollSnapPoint}
       />
     </section>
   );
