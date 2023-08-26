@@ -5,8 +5,7 @@ import axios from "axios";
 import ContactFormInput from "./ContactFormInput";
 import { AiOutlineSend } from "react-icons/ai";
 import { FaSpinner } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
+import Socials from "../Components/Socials";
 
 export interface formState {
   Subject: string | null;
@@ -93,7 +92,7 @@ export default function ContactPage() {
   const validClass =
     " border-sky-600 focus:outline-none focus:ring focus:ring-sky-600 ";
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-  const logoClass = "flex items-center mt-2 sm:mt-4  sm:w-max";
+
   return (
     <main className="flex flex-col sm:flex-row  m-2 mt-24 sm:mt-16  ">
       <div>
@@ -109,45 +108,7 @@ export default function ContactPage() {
         <p className="mx-2 sm:mx-0">
           You can also find me on these sites or send me an email directly.
         </p>
-        <ul className="mx-4 sm:mx-0  flex justify-between sm:flex-col text-sky-700 dark:text-sky-500 font-semibold text-lg">
-          <li>
-            <a
-              className={logoClass}
-              target="_break"
-              href="https://www.linkedin.com/in/adam-saunders-13a304142/"
-            >
-              <BsLinkedin className="w-8 h-8 mr-2 text-sky-600" /> Linkedin
-            </a>
-          </li>
-          <li>
-            <a
-              className={logoClass}
-              target="_break"
-              href="https://github.com/AdamSaunders26"
-            >
-              <BsGithub className="w-8 h-8 mr-2 text-sky-600" /> Github
-            </a>
-          </li>
-          <li>
-            <a
-              className={logoClass + " hidden sm:flex"}
-              target="_blank"
-              href="mailto:contact@adam-saunders.dev"
-            >
-              <HiOutlineMail className="w-8 h-8 mr-2 text-sky-600" />{" "}
-              contact@adam-saunders.dev
-            </a>
-          </li>
-          <li>
-            <a
-              className={logoClass + " sm:hidden "}
-              target="_blank"
-              href="mailto:contact@adam-saunders.dev"
-            >
-              <HiOutlineMail className="w-8 h-8 mr-2 text-sky-600" /> Email
-            </a>
-          </li>
-        </ul>
+        <Socials />
       </div>
       <form
         className="bg-white dark:bg-black flex flex-col m-2 my-4  min-w-[50%]  dark:font-light font-semibold p-2 rounded-md "
