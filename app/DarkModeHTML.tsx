@@ -2,7 +2,7 @@
 
 import { NextFont } from "next/dist/compiled/@next/font";
 import Header from "./Header";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Props {
   font: NextFont;
@@ -11,7 +11,15 @@ interface Props {
 
 export default function DarkModeHTML({ font, children }: Props) {
   const [darkMode, setDarkMode] = useState(false);
-  console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }, []);
+
   return (
     <html
       lang="en"
