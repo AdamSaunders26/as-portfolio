@@ -31,12 +31,7 @@ export default function Carousel({
 
   function handleScroll(e: React.UIEvent<HTMLDivElement, UIEvent>) {
     const currentScrollPosition = (e.target as HTMLDivElement).scrollLeft;
-    console.log({ currentScrollPosition });
-    console.log({ maxScrollWidth });
-    console.log({ scrollSnapPoint });
-    console.log({ currentProject });
-    console.log(project.length);
-    console.log(carouselRef.current?.scrollWidth);
+
     switch (true) {
       case currentScrollPosition < scrollSnapPoint - 50:
         setCurrentProject(0);
@@ -55,7 +50,6 @@ export default function Carousel({
 
   useEffect(() => {
     if (carouselRef.current) {
-      console.log(carouselRef.current.scrollWidth * 0.79);
       setMaxScrollWidth(carouselRef.current.scrollWidth);
       setScrollSnapPoint(
         (carouselRef.current.scrollWidth * 0.79) / project.length
