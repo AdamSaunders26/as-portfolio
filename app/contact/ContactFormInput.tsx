@@ -34,7 +34,7 @@ export default function ContactFormInput({
       >
         <span className="">{inputName}:</span>
         {inputType === ""
-          ? ` Please provide a ${inputName.toLowerCase()} before submitting.`
+          ? ` Please enter a ${inputName.toLowerCase()} before submitting.`
           : null}
         <span className="text-red-500">
           {!validEmail ? " Please ensure your email is valid." : null}
@@ -43,6 +43,7 @@ export default function ContactFormInput({
       <input
         id={inputName}
         name={inputName}
+        maxLength={100}
         onChange={setFormData}
         onClick={(e) => {
           setFormData(e);

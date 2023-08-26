@@ -23,9 +23,11 @@ export default function Header({
         <div className=" place-self-center  hidden sm:flex">
           <DarkModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
         </div>
-        <h1 className="font-bold text-3xl mx-4 text-center sm:text-2xl lg:text-3xl text-sky-700 dark:text-sky-500">
-          Adam Saunders
-        </h1>
+        <Link href="/">
+          <h1 className="font-bold text-3xl mx-4 text-center sm:text-2xl lg:text-3xl text-sky-700 dark:text-sky-500">
+            Adam Saunders
+          </h1>
+        </Link>
         <div className=" place-self-center fixed right-0 top-0 m-4 sm:hidden">
           <DarkModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
         </div>
@@ -33,7 +35,7 @@ export default function Header({
       <div className="flex my-2 sm:mr-4 gap-2 ">
         <div className={linkClass + (pathname === "/" ? currentClass : "")}>
           <Link href="/">
-            <p>About Me</p>
+            <p>About</p>
           </Link>
         </div>
         <div
@@ -56,7 +58,7 @@ export default function Header({
           className={linkClass + (pathname === "/contact" ? currentClass : "")}
         >
           <Link href="/contact">
-            <p>Get in touch</p>
+            <p>Contact</p>
           </Link>
         </div>
       </div>

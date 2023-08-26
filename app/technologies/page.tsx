@@ -12,7 +12,7 @@ export default function TechnologiesPage() {
         past and have a good working knowledge of.
       </p>
       <TechSection sectionName={"Languages"} techArray={languageArr} />
-      <div className="flex ">
+      <div className="flex justify-center ">
         <TechSection sectionName={"Front-End"} techArray={frontEndTechs} />
         <TechSection sectionName={"Back-End"} techArray={backEndTechs} />
       </div>

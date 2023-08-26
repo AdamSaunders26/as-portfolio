@@ -11,6 +11,7 @@ interface Props {
 
 export default function DarkModeHTML({ font, children }: Props) {
   const [darkMode, setDarkMode] = useState(false);
+  console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
   return (
     <html
       lang="en"

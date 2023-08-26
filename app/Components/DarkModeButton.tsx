@@ -7,7 +7,7 @@ interface Props {
 }
 
 export default function DarkModeButton({ darkMode, setDarkMode }: Props) {
-  const darkModeClass = "w-6 h-6 active:scale-75  ";
+  const darkModeClass = "w-6 h-6 active:scale-75 hover:cursor-pointer  ";
   return (
     <div
       onClick={() => {

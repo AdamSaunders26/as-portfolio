@@ -7,7 +7,7 @@ interface Props {
 
 export default function TechSection({ sectionName, techArray }: Props) {
   return (
-    <section className="my-2 mx-2 p-2 rounded-md bg-white dark:bg-black">
+    <section className="my-2 mx-2 p-2 rounded-md bg-white dark:bg-black flex-grow ">
       <h2 className="mx-2 font-semibold text-sky-700 dark:text-sky-500">
         {sectionName}
       </h2>

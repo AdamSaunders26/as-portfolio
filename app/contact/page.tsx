@@ -174,12 +174,13 @@ export default function ContactPage() {
           >
             <span className="">Message:</span>
             {formData.Message === ""
-              ? ` Please provide a message before submitting.`
+              ? ` Please enter a message before submitting.`
               : null}
           </label>
           <textarea
             id="Message"
             name="Message"
+            maxLength={500}
             onChange={setFormData}
             onClick={(e) => {
               setFormData(e);
@@ -188,10 +189,15 @@ export default function ContactPage() {
             value={formData.Message ? formData.Message : ""}
             className={
               formData.Message === ""
-                ? inputClass + errorClass
-                : inputClass + validClass
+                ? "rounded-md p-2  mt-2 border-2 font-normal dark:bg-neutral-900" +
+                  errorClass
+                : "rounded-md p-2  mt-2 border-2 font-normal dark:bg-neutral-900" +
+                  validClass
             }
           />
+          <p className=" place-self-end">
+            {formData.Message?.length ? formData.Message?.length : 0}/500
+          </p>
         </div>
         <ContactFormInput
           formData={formData}

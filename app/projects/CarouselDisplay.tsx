@@ -25,7 +25,7 @@ export default function CarouselDisplay({
       {projects.map(({ key, imageSrc, alt, details, project }, index) => {
         const [modalOpen, setModalOpen] = useState(false);
 
-        const projectClass = " snap-center basis-1/4 shrink-0 relative ";
+        const projectClass = " snap-center basis-1/4 shrink-0 relative flex ";
         return (
           <div className={projectClass} key={key}>
             {modalOpen ? (
@@ -37,7 +37,7 @@ export default function CarouselDisplay({
             ) : null}
             <div
               className={
-                "w-72 sm:w-[26rem] md:w-[32rem] lg:w-[46rem] rounded-md border-sky-600 dark:border-sky-500 border-4 mx-2 mb-2"
+                "w-60 mini:w-72 plus:w-[20rem] sm:w-[31rem] md:w-[32rem] lg:w-[46rem] rounded-md border-sky-600 dark:border-sky-500 border-4 mx-2 mb-2 "
               }
             >
               <Image

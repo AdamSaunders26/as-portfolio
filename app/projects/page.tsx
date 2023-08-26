@@ -10,7 +10,7 @@ import {
 
 export default function CarouselPage() {
   return (
-    <main className="mx-4 sm:max-h-0 mt-24 sm:mt-16">
+    <main className="mx-2 sm:max-h-0 mt-24 sm:mt-16">
       <h2 className="text-2xl mx-2 my-2 font-semibold text-sky-700 dark:text-sky-500">
         Projects
       </h2>
