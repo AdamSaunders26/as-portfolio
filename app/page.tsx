@@ -46,13 +46,14 @@ export default function Home() {
           Having trained as a primary school teacher and working with 30 small
           children each day, programming is a breath of fresh air. Although I
           have many fond memories of the classes I've taught and schools I've
-          worked at, coding has gotten me excited to get out bed in the mornings
-          again. I love the constant battle between taking on tricky challenges
-          and then actually finding solutions for them. This portfolio website
-          is the first thing I have created since leaving the Northcoders course
-          - I hope you enjoy browsing through the site. Please don't hesistate
-          to get in touch if you have a great idea you'd like to collaborate on
-          or if you think I'd be a good fit for a vacancy at your company.
+          worked at, coding has gotten me excited to get out of bed in the
+          mornings again. I love the constant battle between taking on tricky
+          challenges and then actually finding solutions for them. This
+          portfolio website is the first thing I have created since leaving the
+          Northcoders course - I hope you enjoy browsing through the site.
+          Please don't hesitate to get in touch if you have a great idea you'd
+          like to collaborate on or if you think I'd be a good fit for a vacancy
+          at your company.
         </p>
       </article>
       <Socials horizontal={true} cv={true} />

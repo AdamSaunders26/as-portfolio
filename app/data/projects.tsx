@@ -85,6 +85,6 @@ export const SoundWaves: ProjectType[] = [
     imageSrc: soundwaves3,
     alt: "Screenshots of the single wave page, showing a transcipt and comments",
     details:
-      "Another large challenge was ensuring the waves could be played continiously across the app. You can see a 'Now Playing' bar at the bottom which uses React Context to allow it to play audio seamlessly. We also wanted to ensure explicit waves were monitored, so we included transcription in our back-end which is then run against a filter to tag any waves which have explicit content",
+      "Another large challenge was ensuring the waves could be played continuously across the app. You can see a 'Now Playing' bar at the bottom which uses React Context to allow it to play audio seamlessly. We also wanted to ensure explicit waves were monitored, so we included transcription in our back-end which is then run against a filter to tag any waves which have explicit content",
   },
 ];
