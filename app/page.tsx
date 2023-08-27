@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import profilePic from "/images/profilepic.jpg";
+
+import profilePic2 from "/images/profilePic2.jpg";
 import Socials from "./Components/Socials";
 
 export default function Home() {
@@ -12,10 +13,10 @@ export default function Home() {
       <div className="flex flex-col mb-2  mx-4">
         <Image
           className="rounded-full  w-64 h-64 0 my-4 sm:max-h-[36rem] place-self-center object-cover"
-          src={profilePic}
+          src={profilePic2}
           priority={true}
           placeholder="blur"
-          alt="Adam and his wife smiling along the coast of Crete"
+          alt="Adam smiling and looking into the camera"
         />
       </div>
       <article className="place-self-center p-4  mx-4 w-full h-full rounded-md bg-white dark:bg-black sm:mt-4">
@@ -48,11 +49,10 @@ export default function Home() {
           worked at, coding has gotten me excited to get out bed in the mornings
           again. I love the constant battle between taking on tricky challenges
           and then actually finding solutions for them. This portfolio website
-          is the first thing I have created since leaviong the Northcoders
-          course - I hope you enjoy browsing through the site. Please don't
-          hesistate to get in touch if you have a great idea you'd like to
-          collaborate on or if you think I'd be a good fit for a vacancy at your
-          company.
+          is the first thing I have created since leaving the Northcoders course
+          - I hope you enjoy browsing through the site. Please don't hesistate
+          to get in touch if you have a great idea you'd like to collaborate on
+          or if you think I'd be a good fit for a vacancy at your company.
         </p>
       </article>
       <Socials horizontal={true} cv={true} />
