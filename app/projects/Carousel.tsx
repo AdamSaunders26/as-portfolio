@@ -33,17 +33,16 @@ export default function Carousel({
     const currentScrollPosition = (e.target as HTMLDivElement).scrollLeft;
 
     switch (true) {
-      case currentScrollPosition < scrollSnapPoint - 50:
+      case currentScrollPosition > 0 && currentScrollPosition < scrollSnapPoint:
         setCurrentProject(0);
         break;
-      case currentScrollPosition < scrollSnapPoint * 2 - 50:
+      case currentScrollPosition > scrollSnapPoint &&
+        currentScrollPosition < scrollSnapPoint * 2:
         setCurrentProject(1);
         break;
-      case currentScrollPosition < scrollSnapPoint * 3 - 50:
+      case currentScrollPosition > scrollSnapPoint * 2 &&
+        currentScrollPosition < scrollSnapPoint * 3:
         setCurrentProject(2);
-        break;
-      case currentScrollPosition < maxScrollWidth:
-        setCurrentProject(3);
         break;
     }
   }
@@ -52,7 +51,7 @@ export default function Carousel({
     if (carouselRef.current) {
       setMaxScrollWidth(carouselRef.current.scrollWidth);
       setScrollSnapPoint(
-        (carouselRef.current.scrollWidth * 0.79) / project.length
+        (carouselRef.current.scrollWidth * 0.78) / project.length
       );
     }
   }, [carouselRef.current?.scrollWidth]);

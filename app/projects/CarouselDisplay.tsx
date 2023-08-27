@@ -37,7 +37,7 @@ export default function CarouselDisplay({
             ) : null}
             <div
               className={
-                "w-60 mini:w-72 plus:w-[20rem] sm:w-[31rem] md:w-[32rem] lg:w-[46rem] 2xl:w-[78rem] rounded-md border-sky-600 dark:border-sky-500 border-4 mx-2 mb-2 "
+                "w-60 mini:w-72 plus:w-[20rem] sm:w-[31rem] md:w-[32rem] lg:w-[46rem] xl:w-[60rem] 2xl:w-[78rem] rounded-md border-sky-600 dark:border-sky-500 border-4 mx-2 mb-2 "
               }
             >
               <Image
