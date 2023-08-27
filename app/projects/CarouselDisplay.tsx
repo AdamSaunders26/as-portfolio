@@ -20,7 +20,7 @@ export default function CarouselDisplay({
       onScroll={(e) => {
         handleScroll(e);
       }}
-      className="  col-span-10 col-start-2 sm:col-span-10 flex mt-2 overflow-x-scroll snap-mandatory snap-x scroll-smooth "
+      className="  col-span-10 col-start-2 sm:col-span-10 flex mt-2 overflow-x-scroll snap-mandatory snap-x scroll-smooth scrollbar-thin  scrollbar-track-white dark:scrollbar-track-black scrollbar-thumb-sky-600 dark:scrollbar-thumb-sky-500 "
     >
       {projects.map(({ key, imageSrc, alt, details, project }, index) => {
         const [modalOpen, setModalOpen] = useState(false);
