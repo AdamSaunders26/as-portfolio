@@ -99,7 +99,7 @@ export default function ContactPage() {
         <h2 className="text-2xl my-2 mx-2 sm:mx-0 font-bold text-sky-700 dark:text-sky-500">
           Get in touch!
         </h2>
-        <p className="mx-2 sm:mx-0">
+        <p className="mx-2 mb-2 sm:mx-0">
           Feel free to drop me a message about anything at all! I'm currently
           looking for work so definitely get in touch if you think I would be a
           good fit at your company. I'd also love to know if you spot any bugs

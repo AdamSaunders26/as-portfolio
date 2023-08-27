@@ -16,15 +16,16 @@ export default function CarouselPage() {
       </h2>
       <p className="mx-2 ">
         These are all the projects that are complete enough to share and
-        display. There are many mini-apps that I have also worked but, but I
+        display. There are many mini-apps that I have also worked on, but I
         would like to revisit these before adding them to this list.
       </p>
       <Carousel
-        project={NCnewsAPI}
-        projectName="NC News API"
-        githubURL="https://github.com/AdamSaunders26/nc-news-backendProject"
-        hostedURL="https://nc-news-app.onrender.com/api"
-        techArray={NCnewsAPITech}
+        project={SoundWaves}
+        projectName="SoundWaves"
+        githubURL="https://github.com/AdamSaunders26/as-front-end-sound-waves"
+        secondGithub="https://github.com/AdamSaunders26/back-end-sound-waves"
+        hostedURL="https://aa-sound-waves.vercel.app/"
+        techArray={soundWavesTech}
       />
       <Carousel
         project={NCnews}
@@ -34,12 +35,11 @@ export default function CarouselPage() {
         techArray={NCnewsTech}
       />
       <Carousel
-        project={SoundWaves}
-        projectName="SoundWaves"
-        githubURL="https://github.com/AdamSaunders26/as-front-end-sound-waves"
-        secondGithub="https://github.com/AdamSaunders26/back-end-sound-waves"
-        hostedURL="https://aa-sound-waves.vercel.app/"
-        techArray={soundWavesTech}
+        project={NCnewsAPI}
+        projectName="NC News API"
+        githubURL="https://github.com/AdamSaunders26/nc-news-backendProject"
+        hostedURL="https://nc-news-app.onrender.com/api"
+        techArray={NCnewsAPITech}
       />
     </main>
   );
