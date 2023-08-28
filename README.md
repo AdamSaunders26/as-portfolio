@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **Portfolio Website**
 
-## Getting Started
+Hosted version of the website - https://www.adam-saunders.dev/
 
-First, run the development server:
+## **Project Summary**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+This is my portfolio website made using TypeScript and React through Next.js, and styled with Tailwind.css. I've tried to use libraries and packages as little as possible, as I wanted to fully understand the components I was creating. The few packages I have used include SendGrid and Axios for my contact form - everything else was made by myself.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Although I'm happy with the current state of the site I know there are more areas that can be improved and please let me know if you spot any issues or bugs.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## **Cloning**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+If you would like to clone and run this repo locally, you will need to do the following:
 
-## Learn More
+Firstly, clone the repo:
 
-To learn more about Next.js, take a look at the following resources:
+- `git clone https://github.com/AdamSaunders26/as-portfolio.git`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You will then need to run these commands:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `npm install`
+- `npm run dev`
 
-## Deploy on Vercel
+You will then be able to see the website locally.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## **Version Requirements**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You should ensure that you have the following installed:
+
+- Node.js V20.0.0 or higher - https://nodejs.org/en/download/current
+- Axios V1.4.0 or higher - https://axios-http.com/docs/intro
+- React V18.2.0 or higher - https://react.dev/
