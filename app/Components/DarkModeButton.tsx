@@ -16,7 +16,7 @@ export default function DarkModeButton({ darkMode, setDarkMode }: Props) {
       }}
     >
       {darkMode ? (
-        <BsMoonFill className={darkModeClass + "text-sky-600"} />
+        <BsMoonFill className={darkModeClass + "text-sky-500"} />
       ) : (
         <BsSunFill className={darkModeClass + "text-sky-700"} />
       )}

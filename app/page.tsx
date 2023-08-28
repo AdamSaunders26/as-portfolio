@@ -43,12 +43,12 @@ export default function Home() {
           problems through code.
         </p>
         <p className="mt-2">
-          Having trained as a primary school teacher and working with 30 small
-          children each day, programming is a breath of fresh air. Although I
-          have many fond memories of the classes I've taught and schools I've
-          worked at, coding has gotten me excited to get out of bed in the
-          mornings again. I love the constant battle between taking on tricky
-          challenges and then actually finding solutions for them. This
+          After having trained as a primary school teacher and working with 30
+          excitable children each day, programming is a breath of fresh air.
+          Although I have many fond memories of the classes I've taught and
+          schools I've worked at, coding has gotten me excited to get out of bed
+          in the mornings again. I love the constant battle between taking on
+          tricky challenges and then actually finding solutions for them. This
           portfolio website is the first thing I have created since leaving the
           Northcoders course - I hope you enjoy browsing through the site.
           Please don't hesitate to get in touch if you have a great idea you'd
