@@ -1,7 +1,7 @@
 "use client";
 
 import Carousel from "./Carousel";
-import { NCnews, NCnewsAPI, SoundWaves } from "../data/projects";
+import { NCnews, NCnewsAPI, Portfolio, SoundWaves } from "../data/projects";
 import {
   NCnewsAPITech,
   NCnewsTech,
@@ -39,6 +39,13 @@ export default function CarouselPage() {
         projectName="NC News API"
         githubURL="https://github.com/AdamSaunders26/nc-news-backendProject"
         hostedURL="https://nc-news-app.onrender.com/api"
+        techArray={NCnewsAPITech}
+      />
+      <Carousel
+        project={Portfolio}
+        projectName="Portfolio"
+        githubURL="https://github.com/AdamSaunders26/as-portfolio"
+        hostedURL="https://www.adam-saunders.dev/"
         techArray={NCnewsAPITech}
       />
     </main>

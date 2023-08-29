@@ -44,6 +44,18 @@ export default function Carousel({
         currentScrollPosition < scrollSnapPoint * 3:
         setCurrentProject(2);
         break;
+      case currentScrollPosition > scrollSnapPoint * 3 &&
+        currentScrollPosition < scrollSnapPoint * 4:
+        setCurrentProject(3);
+        break;
+      case currentScrollPosition > scrollSnapPoint * 4 &&
+        currentScrollPosition < scrollSnapPoint * 5:
+        setCurrentProject(4);
+        break;
+      case currentScrollPosition > scrollSnapPoint * 5 &&
+        currentScrollPosition < scrollSnapPoint * 6:
+        setCurrentProject(5);
+        break;
     }
   }
 

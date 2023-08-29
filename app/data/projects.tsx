@@ -7,6 +7,12 @@ import ncapi2 from "../../images/nc-api2.png";
 import soundwaves1 from "../../images/soundwaves1.png";
 import soundwaves2 from "../../images/soundwaves2.png";
 import soundwaves3 from "../../images/soundwaves3.png";
+import portfolio1 from "../../images/portfolio1.png";
+import portfolio2 from "../../images/portfolio2.png";
+import portfolio3 from "../../images/portfolio3.png";
+import portfolio4 from "../../images/portfolio4.png";
+import portfolio5 from "../../images/portfolio5.png";
+import portfolio6 from "../../images/portfolio6.png";
 
 export interface ProjectType {
   key: number;
@@ -83,6 +89,33 @@ export const SoundWaves: ProjectType[] = [
     key: 2,
     project: "Single Wave",
     imageSrc: soundwaves3,
+    alt: "Screenshots of the single wave page, showing a transcipt and comments",
+    details:
+      "Another large challenge was ensuring the waves could be played continuously across the app. You can see a 'Now Playing' bar at the bottom which uses React Context to allow it to play audio seamlessly. We also wanted to ensure explicit waves were monitored, so we included transcription in our back-end which is then run against a filter to tag any waves which have explicit content",
+  },
+];
+
+export const Portfolio: ProjectType[] = [
+  {
+    key: 0,
+    project: "About",
+    imageSrc: portfolio1,
+    alt: "The default screen of SoundWaves, showing users you can log in as.",
+    details:
+      "SoundWaves was the result of a group project. It's a social media style app which is almost a hybrid between Twitter (X) and Reddit with the major difference being that users post audio clips, or SoundWaves. As we only had two weeks to create a front and back end, we had to settle on pre-generated users as we didn't have time to implement authentication. Users can choose between different users before navigating using the hamburger menu. ",
+  },
+  {
+    key: 1,
+    project: "Projects",
+    imageSrc: portfolio2,
+    alt: "Screenshots of all waves, boards and new wave page",
+    details:
+      "We were encouraged to use new technologies for this task which made the project quite challenging! We decided to use Next.js and Typescript for the front-end. Typescript had a bit of a steep learning curve but we eventually got used to it and found it to be very useful at times. The Ocean displays all submitted waves but users can also visit specific boards for waves related to a given topic. Recording waves was one of our biggest challenges as we had to figure out a way to send the audio data into a back-end and then into an S3 bucket on Supabase.",
+  },
+  {
+    key: 2,
+    project: "Technologies",
+    imageSrc: portfolio3,
     alt: "Screenshots of the single wave page, showing a transcipt and comments",
     details:
       "Another large challenge was ensuring the waves could be played continuously across the app. You can see a 'Now Playing' bar at the bottom which uses React Context to allow it to play audio seamlessly. We also wanted to ensure explicit waves were monitored, so we included transcription in our back-end which is then run against a filter to tag any waves which have explicit content",

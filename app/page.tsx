@@ -9,7 +9,7 @@ export default function Home() {
   const punctuationClass = "text-base";
   const pronounClass = "text-base text-neutral-700 dark:text-neutral-200";
   return (
-    <main className=" mx-4  mt-24 sm:mt-16 grid grid-cols-1 items-center  sm:grid-cols-2">
+    <main className=" mx-4  mt-24 sm:mt-16 h-full grid grid-cols-1 items-center  sm:grid-cols-2">
       <div className="flex flex-col mb-2  mx-4">
         <Image
           className="rounded-full  w-64 h-64 0 my-4 sm:max-h-[36rem] place-self-center object-cover"
@@ -19,7 +19,7 @@ export default function Home() {
           alt="Adam smiling and looking into the camera"
         />
       </div>
-      <article className="place-self-center p-4  mx-4 w-full h-full rounded-md bg-white dark:bg-black sm:mt-4">
+      <article className="place-self-center px-4 py-2 flex flex-col h-max justify-center mt-4 w-full rounded-md bg-white dark:bg-black sm:mt-4">
         <div className="border-sky-600 border-b-2">
           <h2 className="text-2xl font-bold text-sky-700 dark:text-sky-500">
             Adam Saunders <span className={punctuationClass}>(</span>
