@@ -19,6 +19,7 @@ export default function ContactPage() {
   const [isError, setIsError] = useState<boolean>(false);
   const [validEmail, setValidEmail] = useState<boolean>(true);
   const [submitSuccess, setSubmitSuccess] = useState<boolean>(false);
+  const [submitError, setSubmitError] = useState<boolean>(false);
 
   function formReducer(
     state: formState,
@@ -79,8 +80,9 @@ export default function ContactPage() {
           console.log(data);
         })
         .catch((err) => {
-          setIsError(true);
+          setSubmitError(true);
           setIsSubmitting(false);
+          console.log("broke");
           console.log(err);
         });
     }
@@ -193,6 +195,19 @@ export default function ContactPage() {
             <p>
               Success! Thanks for your message! I'll normally get back to you
               within the next few hours but this may be longer at the weekends.{" "}
+            </p>
+          ) : null}
+          {submitError ? (
+            <p>
+              Something went wrong. Please refresh the page and try again. If
+              that doesn't work then send and email to{" "}
+              <a
+                className="text-sky-700 dark:text-sky-500"
+                href="mailto:contact@adam-saunders.dev"
+              >
+                contact@adam-saunders.dev
+              </a>{" "}
+              and I'll try to figure out what happened!
             </p>
           ) : null}
         </div>

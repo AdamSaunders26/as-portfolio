@@ -12,9 +12,5 @@ export default async function sendEmail(subject: string, text: string) {
     text,
   };
 
-  try {
-    await sgMail.send(message);
-  } catch (error) {
-    console.error(error);
-  }
+  await sgMail.send(message);
 }

@@ -100,24 +100,24 @@ export const Portfolio: ProjectType[] = [
     key: 0,
     project: "About",
     imageSrc: portfolio1,
-    alt: "The default screen of SoundWaves, showing users you can log in as.",
+    alt: "The about screen of adam-saunders.dev, there is a picture of Adam next to a short bio.",
     details:
-      "SoundWaves was the result of a group project. It's a social media style app which is almost a hybrid between Twitter (X) and Reddit with the major difference being that users post audio clips, or SoundWaves. As we only had two weeks to create a front and back end, we had to settle on pre-generated users as we didn't have time to implement authentication. Users can choose between different users before navigating using the hamburger menu. ",
+      "This website is the latest thing I've created! It features support for different screen sizes and includes an automatic dark/light mode which can be toggled manually as well. I wanted to carry on with Next.js and Typescript as I had found it to be a good combination whilst working on SoundWaves. I spent quite a bit of time on styling the site before settling on the blue accented theme. Tailwind made it very easy to style this effectively and I really like how all the styling is right next to the components themselves.",
   },
   {
     key: 1,
-    project: "Projects",
+    project: "Projects Carousel",
     imageSrc: portfolio2,
-    alt: "Screenshots of all waves, boards and new wave page",
+    alt: "Screenshot of the projects page, showing the SoundWaves project",
     details:
-      "We were encouraged to use new technologies for this task which made the project quite challenging! We decided to use Next.js and Typescript for the front-end. Typescript had a bit of a steep learning curve but we eventually got used to it and found it to be very useful at times. The Ocean displays all submitted waves but users can also visit specific boards for waves related to a given topic. Recording waves was one of our biggest challenges as we had to figure out a way to send the audio data into a back-end and then into an S3 bucket on Supabase.",
+      "The carousel was to display the projects was probably the most challenging section of the site as I didn't want to use a package like Swiper because it felt like something I could do myself and I wanted to test my abilities. I had already used the useRef hook for audio in SoundWaves so it was fairly easy to use it for the scroll bar here. Then it was simply a combination of flex and grid along with overflow and fixed positioning for the different slides. However, creating and indicator/selector proved tricky as different screen sizes scroll different amounts and it wasn't as simple as dividng the maximum scroll width by the number of slides.",
   },
   {
     key: 2,
-    project: "Technologies",
+    project: "Contact Form",
     imageSrc: portfolio3,
-    alt: "Screenshots of the single wave page, showing a transcipt and comments",
+    alt: "Screen shot of the contact form, with some links to different sites on the left.",
     details:
-      "Another large challenge was ensuring the waves could be played continuously across the app. You can see a 'Now Playing' bar at the bottom which uses React Context to allow it to play audio seamlessly. We also wanted to ensure explicit waves were monitored, so we included transcription in our back-end which is then run against a filter to tag any waves which have explicit content",
+      "This was one of the only sections I used a package for, SendGrid, to handle the emails. I also put a lot of time into validating the different inputs and making sure the user was provided enough feedback to understand what was required. I was also keen to ensure there was a sumbiting state and success message to ensure users would know that their message had been delivered successfully. I also wanted to make sure there was feedback for any submission errors that may occur as well.",
   },
 ];

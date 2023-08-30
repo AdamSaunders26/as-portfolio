@@ -41,7 +41,7 @@ export default function CarouselDisplay({
               }
             >
               <Image
-                className=" border-8 border-transparent rounded-xl hover:cursor-pointer"
+                className=" border-8 border-transparent rounded-xl hover:cursor-zoom-in"
                 src={imageSrc}
                 alt={alt}
                 priority={true}
