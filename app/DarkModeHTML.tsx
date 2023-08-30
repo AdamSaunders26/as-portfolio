@@ -1,7 +1,7 @@
 "use client";
 
 import { NextFont } from "next/dist/compiled/@next/font";
-import Header from "./Header";
+import Header from "./(app)/Header";
 import { useEffect, useState } from "react";
 
 interface Props {
