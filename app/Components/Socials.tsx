@@ -42,7 +42,7 @@ export default function Socials({ horizontal = false, cv = false }: Props) {
           <a
             className={logoClass}
             target="_blank"
-            href="Adam Saunders - Software Developer CV v2.2.pdf"
+            href="Adam Saunders - Software Developer CV v2.3.pdf"
           >
             <BsFiletypePdf className="w-8 h-8 mr-1 text-sky-600" /> CV
           </a>
