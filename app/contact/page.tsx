@@ -123,6 +123,7 @@ export default function ContactPage() {
         {inputNames.map((name) => {
           return (
             <ContactFormInput
+              key={name}
               formData={formData}
               inputName={name}
               setFormData={setFormData}

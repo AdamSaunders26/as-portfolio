@@ -42,6 +42,7 @@ export default function Header({
         {headerLinks.map((link) => {
           return (
             <HeaderLink
+              key={link}
               linkClass={linkClass}
               pathname={pathname}
               currentClass={currentClass}

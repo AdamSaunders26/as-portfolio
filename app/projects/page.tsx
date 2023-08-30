@@ -25,6 +25,7 @@ export default function CarouselPage() {
         }) => {
           return (
             <Carousel
+              key={projectName}
               project={project}
               projectName={projectName}
               githubURL={githubURL}
