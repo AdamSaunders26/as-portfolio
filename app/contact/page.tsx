@@ -3,9 +3,10 @@
 import { FormEvent, useReducer, useState } from "react";
 import axios from "axios";
 import ContactFormInput from "./ContactFormInput";
-import { AiOutlineSend } from "react-icons/ai";
-import { FaSpinner } from "react-icons/fa";
 import Socials from "../Components/Socials";
+import ErrorMessage from "./ErrorMessage";
+import SubmitButton from "../Components/SubmitButton";
+import SubmitMessage from "./SubmitMessage";
 
 export interface formState {
   Subject: string | null;
@@ -95,6 +96,8 @@ export default function ContactPage() {
     " border-sky-600 focus:outline-none focus:ring focus:ring-sky-600 ";
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
+  const inputNames = ["Subject", "Message", "Name", "Email"];
+
   return (
     <main className="flex flex-col sm:flex-row  m-2 mt-24 sm:mt-16  ">
       <div>
@@ -116,100 +119,27 @@ export default function ContactPage() {
         className="bg-white dark:bg-black flex flex-col m-2 my-4  min-w-[50%]  dark:font-light font-semibold p-2 rounded-md "
         onSubmit={handleSubmit}
       >
-        {isError ? (
-          <p className="mx-2 font-semibold text-red-500 text-lg">
-            Please make sure all inputs have been filled in and try again.
-          </p>
-        ) : null}
-        <ContactFormInput
-          formData={formData}
-          inputName={"Subject"}
-          setFormData={setFormData}
-          inputClass={inputClass}
-          errorClass={errorClass}
-          validClass={validClass}
-          setSubmitSuccess={setSubmitSuccess}
-        />
-        <div className="flex flex-col mx-2">
-          <label
-            htmlFor="Message"
-            className={formData.Message === "" ? "text-red-500" : ""}
-          >
-            <span className="">Message:</span>
-            {formData.Message === ""
-              ? ` Please enter a message before submitting.`
-              : null}
-          </label>
-          <textarea
-            id="Message"
-            name="Message"
-            maxLength={500}
-            onChange={setFormData}
-            onClick={(e) => {
-              setFormData(e);
-              setSubmitSuccess(false);
-            }}
-            value={formData.Message ? formData.Message : ""}
-            className={
-              formData.Message === ""
-                ? "rounded-md p-2  mt-2 border-2 font-normal dark:bg-neutral-900" +
-                  errorClass
-                : "rounded-md p-2  mt-2 border-2 font-normal dark:bg-neutral-900" +
-                  validClass
-            }
-          />
-          <p className=" place-self-end">
-            {formData.Message?.length ? formData.Message?.length : 0}/500
-          </p>
-        </div>
-        <ContactFormInput
-          formData={formData}
-          inputName={"Name"}
-          setFormData={setFormData}
-          inputClass={inputClass}
-          errorClass={errorClass}
-          validClass={validClass}
-          setSubmitSuccess={setSubmitSuccess}
-        />
-        <ContactFormInput
-          formData={formData}
-          inputName={"Email"}
-          setFormData={setFormData}
-          inputClass={inputClass}
-          validEmail={validEmail}
-          errorClass={errorClass}
-          validClass={validClass}
-          setSubmitSuccess={setSubmitSuccess}
-        />
+        <ErrorMessage isError={isError} />
+        {inputNames.map((name) => {
+          return (
+            <ContactFormInput
+              formData={formData}
+              inputName={name}
+              setFormData={setFormData}
+              inputClass={inputClass}
+              errorClass={errorClass}
+              validClass={validClass}
+              validEmail={name === "Email" ? validEmail : true}
+              setSubmitSuccess={setSubmitSuccess}
+            />
+          );
+        })}
         <div className="flex gap-4 mx-2">
-          <button
-            disabled={isSubmitting}
-            className="bg-white dark:bg-black rounded-md w-max h-max ont-semibold gap-2 p-2 text-xl text-sky-700 dark:text-sky-500 border-2  mb-2 border-sky-600 dark:border-sky-500 flex  items-center hover:bg-neutral-200 dark:hover:bg-neutral-900 active:bg-sky-600 active:text-white dark:active:bg-sky-500 dark:active:text-black"
-          >
-            {isSubmitting ? "Submitting" : "Send"}
-            <span className={isSubmitting ? "animate-spin" : ""}>
-              {isSubmitting ? <FaSpinner /> : <AiOutlineSend />}
-            </span>
-          </button>
-          {submitSuccess ? (
-            <p>
-              Success! Thanks for your message! I'll normally get back to you
-              within the next few hours but this may be longer at the weekends.{" "}
-            </p>
-          ) : null}
-          {submitError ? (
-            <p>
-              Something went wrong. Please refresh the page and try again. If
-              that doesn't work then send and email to{" "}
-              <a
-                className="text-sky-700 dark:text-sky-500"
-                href="mailto:contact@adam-saunders.dev"
-              >
-                contact@adam-saunders.dev
-              </a>{" "}
-              and I'll try to figure out what happened!
-            </p>
-          ) : null}
+          <SubmitButton isSubmitting={isSubmitting} />
+          <SubmitMessage
+            submitSuccess={submitSuccess}
+            submitError={submitError}
+          />
         </div>
       </form>
     </main>
