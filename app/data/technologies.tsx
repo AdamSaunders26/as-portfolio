@@ -53,7 +53,6 @@ export const NCnewsAPITech = [
 export const NCnewsTech = [
   <JavaScriptLogo isCarousel={true} />,
   <ReactLogo isCarousel={true} />,
-  // <AxiosLogo isCarousel={true} />,
   <CSSLogo isCarousel={true} />,
 ];
 
@@ -62,10 +61,16 @@ export const soundWavesTech = [
   <NextLogo isCarousel={true} />,
   <ReactLogo isCarousel={true} />,
   <TailwindLogo isCarousel={true} />,
-  // <MiniAxiosLogo isCarousel={true} />,
   <NodeLogo isCarousel={true} />,
   <MiniExpressLogo isCarousel={true} />,
   <SupabaseLogo isCarousel={true} />,
   <PostgreSQLLogo isCarousel={true} />,
   <JestLogo isCarousel={true} />,
+];
+
+export const PortfolioTech = [
+  <TypeScriptLogo isCarousel={true} />,
+  <NextLogo isCarousel={true} />,
+  <ReactLogo isCarousel={true} />,
+  <TailwindLogo isCarousel={true} />,
 ];

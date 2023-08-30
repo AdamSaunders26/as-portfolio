@@ -5,6 +5,7 @@ import { NCnews, NCnewsAPI, Portfolio, SoundWaves } from "../data/projects";
 import {
   NCnewsAPITech,
   NCnewsTech,
+  PortfolioTech,
   soundWavesTech,
 } from "../data/technologies";
 
@@ -46,7 +47,7 @@ export default function CarouselPage() {
         projectName="Portfolio"
         githubURL="https://github.com/AdamSaunders26/as-portfolio"
         hostedURL="https://www.adam-saunders.dev/"
-        techArray={NCnewsAPITech}
+        techArray={PortfolioTech}
       />
     </main>
   );

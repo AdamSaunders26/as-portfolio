@@ -48,7 +48,6 @@ export default function CarouselDisplay({
                 placeholder="blur"
                 onClick={() => {
                   setModalOpen((curr) => !curr);
-                  console.log({ alt });
                 }}
               />
               {project === "Login Page" ? (
