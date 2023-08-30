@@ -17,7 +17,7 @@ export default function Header({
   const linkClass =
     "hover:underline text-center rounded-md px-2 text-lg active:text-emerald-700 place-self-center sm:place-self-end ";
   const currentClass = " bg-sky-600 text-white dark:text-black font-light";
-  const headerLinks = ["/", "Projects", "Skills", "Contact"];
+  const headerLinks = ["", "Projects", "Skills", "Contact"];
 
   return (
     <header className="flex flex-col px-2 sm:px-4 py-2 justify-between items-center shadow-lg font-semibold bg-white dark:bg-neutral-900 w-screen left-0 top-0 fixed z-20  text-neutral-700 dark:text-neutral-200 border-b-2 border-sky-600 sm:flex-row">

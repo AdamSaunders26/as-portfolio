@@ -22,7 +22,7 @@ export default function CarouselDisplay({
       }}
       className="  col-span-10 col-start-2 sm:col-span-10 flex mt-2 overflow-x-scroll snap-mandatory snap-x scroll-smooth scrollbar-thin  scrollbar-track-white dark:scrollbar-track-black scrollbar-thumb-sky-600 dark:scrollbar-thumb-sky-500 "
     >
-      {projects.map(({ key, imageSrc, alt, details, project }, index) => {
+      {projects.map(({ key, imageSrc, alt, details, slideName }, index) => {
         const [modalOpen, setModalOpen] = useState(false);
 
         const projectClass = " snap-center basis-1/4 shrink-0 relative flex ";
@@ -50,7 +50,7 @@ export default function CarouselDisplay({
                   setModalOpen((curr) => !curr);
                 }}
               />
-              {project === "Login Page" ? (
+              {slideName === "Login Page" ? (
                 <p className="text-red-500 p-2">
                   Warning: Currently audio cannot be played on Safari or on iOS
                   devices to an issue with the way they handle audio

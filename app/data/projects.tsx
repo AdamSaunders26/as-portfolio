@@ -13,10 +13,16 @@ import portfolio3 from "../../images/portfolio3.png";
 import portfolio4 from "../../images/portfolio4.png";
 import portfolio5 from "../../images/portfolio5.png";
 import portfolio6 from "../../images/portfolio6.png";
+import {
+  NCnewsAPITech,
+  NCnewsTech,
+  PortfolioTech,
+  soundWavesTech,
+} from "./technologies";
 
 export interface ProjectType {
   key: number;
-  project: string;
+  slideName: string;
   imageSrc: StaticImageData;
   alt: string;
   details: string;
@@ -25,7 +31,7 @@ export interface ProjectType {
 export const NCnews: ProjectType[] = [
   {
     key: 0,
-    project: "All articles",
+    slideName: "All articles",
     imageSrc: ncnews1,
     alt: "A view of all the articles on NC News.",
     details:
@@ -33,7 +39,7 @@ export const NCnews: ProjectType[] = [
   },
   {
     key: 1,
-    project: "Article view",
+    slideName: "Article view",
     imageSrc: ncnews2,
     alt: "A detailed view of an articles about Node.js on NC News.",
     details:
@@ -41,7 +47,7 @@ export const NCnews: ProjectType[] = [
   },
   {
     key: 2,
-    project: "Mobile view",
+    slideName: "Mobile view",
     imageSrc: ncnews3,
     alt: "Three images of NC News as viewed from a mobile, showing the main article list and a detailed article view.",
     details:
@@ -52,7 +58,7 @@ export const NCnews: ProjectType[] = [
 export const NCnewsAPI: ProjectType[] = [
   {
     key: 0,
-    project: "/api endpoint",
+    slideName: "/api endpoint",
     imageSrc: ncapi1,
     alt: "A view of all the /api endpoint on the NC News API.",
     details:
@@ -60,7 +66,7 @@ export const NCnewsAPI: ProjectType[] = [
   },
   {
     key: 1,
-    project: "/api/articles endpoint",
+    slideName: "/api/articles endpoint",
     imageSrc: ncapi2,
     alt: "A view of the /api/articles endpoint, showing article details in JSON format.",
     details:
@@ -71,7 +77,7 @@ export const NCnewsAPI: ProjectType[] = [
 export const SoundWaves: ProjectType[] = [
   {
     key: 0,
-    project: "Login Page",
+    slideName: "Login Page",
     imageSrc: soundwaves1,
     alt: "The default screen of SoundWaves, showing users you can log in as.",
     details:
@@ -79,7 +85,7 @@ export const SoundWaves: ProjectType[] = [
   },
   {
     key: 1,
-    project: "View/Submit Waves",
+    slideName: "View/Submit Waves",
     imageSrc: soundwaves2,
     alt: "Screenshots of all waves, boards and new wave page",
     details:
@@ -87,7 +93,7 @@ export const SoundWaves: ProjectType[] = [
   },
   {
     key: 2,
-    project: "Single Wave",
+    slideName: "Single Wave",
     imageSrc: soundwaves3,
     alt: "Screenshots of the single wave page, showing a transcipt and comments",
     details:
@@ -98,7 +104,7 @@ export const SoundWaves: ProjectType[] = [
 export const Portfolio: ProjectType[] = [
   {
     key: 0,
-    project: "About",
+    slideName: "About",
     imageSrc: portfolio1,
     alt: "The about screen of adam-saunders.dev, there is a picture of Adam next to a short bio.",
     details:
@@ -106,7 +112,7 @@ export const Portfolio: ProjectType[] = [
   },
   {
     key: 1,
-    project: "Projects Carousel",
+    slideName: "Projects Carousel",
     imageSrc: portfolio2,
     alt: "Screenshot of the projects page, showing the SoundWaves project",
     details:
@@ -114,10 +120,51 @@ export const Portfolio: ProjectType[] = [
   },
   {
     key: 2,
-    project: "Contact Form",
+    slideName: "Contact Form",
     imageSrc: portfolio3,
     alt: "Screen shot of the contact form, with some links to different sites on the left.",
     details:
       "This was one of the only sections I used a package for, SendGrid, to handle the emails. I also put a lot of time into validating the different inputs and making sure the user was provided enough feedback to understand what was required. I was also keen to ensure there was a sumbiting state and success message to ensure users would know that their message had been delivered successfully. I also wanted to make sure there was feedback for any submission errors that may occur as well.",
+  },
+];
+
+interface ProjectOverviewType {
+  project: ProjectType[];
+  projectName: string;
+  githubURL: string;
+  secondGithub?: string;
+  hostedURL: string;
+  techArray: JSX.Element[];
+}
+
+export const allProjects: ProjectOverviewType[] = [
+  {
+    project: SoundWaves,
+    projectName: "SoundWaves",
+    githubURL: "https://github.com/AdamSaunders26/as-front-end-sound-waves",
+    secondGithub: "https://github.com/AdamSaunders26/back-end-sound-waves",
+    hostedURL: "https://aa-sound-waves.vercel.app/",
+    techArray: soundWavesTech,
+  },
+  {
+    project: NCnews,
+    projectName: "NC News",
+    githubURL: "https://github.com/AdamSaunders26/fe-nc-news",
+    hostedURL: "https://adam-saunders-front-end-project.netlify.app/",
+    techArray: NCnewsTech,
+  },
+  {
+    project: NCnewsAPI,
+    projectName: "NC News API",
+    githubURL: "https://github.com/AdamSaunders26/nc-news-backendProject",
+    hostedURL: "https://nc-news-app.onrender.com/api",
+    techArray: NCnewsAPITech,
+  },
+  {
+    project: Portfolio,
+    projectName: "Portfolio",
+    githubURL: "https://github.com/AdamSaunders26/as-portfolio",
+    hostedURL: "https://www.adam-saunders.dev/",
+    techArray: PortfolioTech,
   },
 ];

@@ -14,9 +14,14 @@ export default function HeaderLink({
   linkName,
 }: Props) {
   return (
-    <div className={linkClass + (pathname === linkName ? currentClass : "")}>
+    <div
+      className={
+        linkClass +
+        (pathname === "/" + linkName.toLowerCase() ? currentClass : "")
+      }
+    >
       <Link href={"/" + linkName.toLowerCase()}>
-        {linkName === "/" ? <p>About</p> : <p>{linkName}</p>}
+        {linkName === "" ? <p>About</p> : <p>{linkName}</p>}
       </Link>
     </div>
   );

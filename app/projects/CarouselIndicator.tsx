@@ -21,7 +21,7 @@ export default function CarouselIndicator({
   const notCurrentTabClass = " hover:bg-sky-100 hover:dark:bg-sky-900";
   return (
     <div className="flex flex-wrap  justify-center ">
-      {projects.map(({ project, key }) => {
+      {projects.map(({ slideName, key }) => {
         return (
           <p
             key={key}
@@ -34,7 +34,7 @@ export default function CarouselIndicator({
               currentProject === key ? currentTabClass : notCurrentTabClass
             }`}
           >
-            {project}
+            {slideName}
           </p>
         );
       })}
