@@ -1,8 +1,10 @@
+import { AiFillGithub } from "react-icons/ai";
 import {
   AxiosLogo,
   CSSLogo,
   ExpoLogo,
   ExpressLogo,
+  GithubLogo,
   HTMLLogo,
   JavaScriptLogo,
   JestLogo,
@@ -38,6 +40,7 @@ export const backEndTechs: [string, string, JSX.Element][] = [
 
 export const frontEndTechs: [string, string, JSX.Element][] = [
   ["React", "https://react.dev", <ReactLogo />],
+  ["React Native", "https://reactnative.dev", <ReactLogo />],
   ["Next.js", "https://nextjs.org/", <NextLogo />],
   ["Tailwind CSS", "https://tailwindcss.com/", <TailwindLogo />],
   ["Axios", "https://axios-http.com/", <AxiosLogo />],
@@ -45,6 +48,11 @@ export const frontEndTechs: [string, string, JSX.Element][] = [
   ["CSS3", "https://en.wikipedia.org/wiki/CSS", <CSSLogo />],
 ];
 
+export const otherTechs: [string, string, JSX.Element][] = [
+  ["Github", "https://github.com/", <GithubLogo />],
+  ["Expo", "https://expo.dev/", <ExpoLogo />],
+  ["OpenAI", "https://openai.com/", <OpenAiLogo />],
+];
 export const NCnewsAPITech = [
   <JavaScriptLogo isCarousel={true} />,
   <NodeLogo isCarousel={true} />,
