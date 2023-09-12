@@ -27,9 +27,13 @@ export default function CarouselPage() {
           }) => {
             return (
               <ProjectCard
+                key={projectName}
                 projectName={projectName}
                 techArray={techArray}
                 project={project}
+                githubURL={githubURL}
+                secondGithub={secondGithub}
+                hostedURL={hostedURL}
               />
               //   key={projectName}
               //   project={project}

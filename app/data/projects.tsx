@@ -14,6 +14,7 @@ import portfolio4 from "../../images/portfolio4.png";
 import portfolio5 from "../../images/portfolio5.png";
 import portfolio6 from "../../images/portfolio6.png";
 import {
+  AppIdeaGeneratorTech,
   NCnewsAPITech,
   NCnewsTech,
   PortfolioTech,
@@ -128,12 +129,39 @@ export const Portfolio: ProjectType[] = [
   },
 ];
 
+export const AppIdeaGenerator: ProjectType[] = [
+  {
+    key: 0,
+    slideName: "Inputs",
+    imageSrc: portfolio1,
+    alt: "The about screen of adam-saunders.dev, there is a picture of Adam next to a short bio.",
+    details:
+      "This website is the latest thing I've created! It features support for different screen sizes and includes an automatic dark/light mode which can be toggled manually as well. I wanted to carry on with Next.js and Typescript as I had found it to be a good combination whilst working on SoundWaves. I spent quite a bit of time on styling the site before settling on the blue accented theme. Tailwind made it very easy to style this effectively and I really like how all the styling is right next to the components themselves.",
+  },
+  {
+    key: 1,
+    slideName: "Idea Lists",
+    imageSrc: portfolio2,
+    alt: "Screenshot of the projects page, showing the SoundWaves project",
+    details:
+      "The carousel was to display the projects was probably the most challenging section of the site as I didn't want to use a package like Swiper because it felt like something I could do myself and I wanted to test my abilities. I had already used the useRef hook for audio in SoundWaves so it was fairly easy to use it for the scroll bar here. Then it was simply a combination of flex and grid along with overflow and fixed positioning for the different slides. However, creating and indicator/selector proved tricky as different screen sizes scroll different amounts and it wasn't as simple as dividng the maximum scroll width by the number of slides.",
+  },
+  {
+    key: 2,
+    slideName: "Idea Description",
+    imageSrc: portfolio3,
+    alt: "Screen shot of the contact form, with some links to different sites on the left.",
+    details:
+      "This was one of the only sections I used a package for, SendGrid, to handle the emails. I also put a lot of time into validating the different inputs and making sure the user was provided enough feedback to understand what was required. I was also keen to ensure there was a sumbiting state and success message to ensure users would know that their message had been delivered successfully. I also wanted to make sure there was feedback for any submission errors that may occur as well.",
+  },
+];
+
 interface ProjectOverviewType {
   project: ProjectType[];
   projectName: string;
   githubURL: string;
   secondGithub?: string;
-  hostedURL: string;
+  hostedURL?: string;
   techArray: JSX.Element[];
 }
 
@@ -166,5 +194,12 @@ export const allProjects: ProjectOverviewType[] = [
     githubURL: "https://github.com/AdamSaunders26/as-portfolio",
     hostedURL: "https://www.adam-saunders.dev/",
     techArray: PortfolioTech,
+  },
+  {
+    project: AppIdeaGenerator,
+    projectName: "App Idea Generator",
+    githubURL: "https://github.com/AdamSaunders26/IdeaGenerator",
+
+    techArray: AppIdeaGeneratorTech,
   },
 ];

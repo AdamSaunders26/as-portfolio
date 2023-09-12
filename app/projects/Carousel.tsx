@@ -69,24 +69,10 @@ export default function Carousel({
   }, [carouselRef.current?.scrollWidth]);
 
   return (
-    <section className=" my-4 grid grid-cols-12 rounded-md bg-white  dark:bg-black ">
+    <section className=" my-1 grid grid-cols-12 rounded-md bg-white  dark:bg-black ">
       <div className="col-span-12 flex flex-col gap-2 place-self-center sm:flex-row ">
         <div className="flex flex-col ">
           <div className="flex flex-col gap-2 sm:flex-row sm:gap-0">
-            {/* <div className="flex items-center justify-between gap-2 place-self-center  text-sky-700 dark:text-sky-500">
-              <a target="_blank" href={githubURL}>
-                <AiFillGithub className="h-8 w-8" />
-              </a>
-              {secondGithub ? (
-                <a target="_blank" href={secondGithub}>
-                  <AiFillGithub className="h-8 w-8" />
-                </a>
-              ) : null}
-              <a target="_blank" href={hostedURL}>
-                <FiExternalLink className="m-1 h-6 w-6" />
-              </a>
-             
-            </div> */}
             <CarouselIndicator
               carouselRef={carouselRef}
               projects={project}

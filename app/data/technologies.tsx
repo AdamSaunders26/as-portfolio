@@ -1,6 +1,7 @@
 import {
   AxiosLogo,
   CSSLogo,
+  ExpoLogo,
   ExpressLogo,
   HTMLLogo,
   JavaScriptLogo,
@@ -9,8 +10,10 @@ import {
   MiniExpressLogo,
   NextLogo,
   NodeLogo,
+  OpenAiLogo,
   PostgreSQLLogo,
   ReactLogo,
+  ReactNativeLogo,
   SupabaseLogo,
   TailwindLogo,
   TypeScriptLogo,
@@ -73,4 +76,12 @@ export const PortfolioTech = [
   <NextLogo isCarousel={true} />,
   <ReactLogo isCarousel={true} />,
   <TailwindLogo isCarousel={true} />,
+];
+
+export const AppIdeaGeneratorTech = [
+  <TypeScriptLogo isCarousel={true} />,
+  <ReactNativeLogo isCarousel={true} />,
+  <TailwindLogo isCarousel={true} />,
+  <ExpoLogo isCarousel={true} />,
+  <OpenAiLogo isCarousel={true} />,
 ];
