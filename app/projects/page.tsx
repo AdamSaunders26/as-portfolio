@@ -4,7 +4,7 @@ import Carousel from "./Carousel";
 import { allProjects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 
-export default function CarouselPage() {
+export default function ProjectPage() {
   return (
     <main className="mx-2 mt-24 sm:mt-16 sm:max-h-0">
       <h2 className="mx-2 my-2 text-2xl font-semibold text-sky-700 dark:text-sky-500">
@@ -24,6 +24,7 @@ export default function CarouselPage() {
             secondGithub,
             hostedURL,
             techArray,
+            slug,
           }) => {
             return (
               <ProjectCard
@@ -34,15 +35,8 @@ export default function CarouselPage() {
                 githubURL={githubURL}
                 secondGithub={secondGithub}
                 hostedURL={hostedURL}
+                slug={slug}
               />
-              //   key={projectName}
-              //   project={project}
-              //   projectName={projectName}
-              //   githubURL={githubURL}
-              //   secondGithub={secondGithub}
-              //   hostedURL={hostedURL}
-              //   techArray={techArray}
-              // />
             );
           },
         )}
