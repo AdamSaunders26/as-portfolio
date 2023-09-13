@@ -12,7 +12,7 @@ export default function RightButton({
 }: Props) {
   return (
     <div
-      className="place-self-center text-sky-600 active:text-sky-800 active:scale-75  "
+      className="hidden place-self-center text-sky-600 active:scale-75 active:text-sky-800 sm:block  "
       onClick={() => {
         if (carouselRef.current) {
           carouselRef.current.scrollLeft += scrollSnapPoint;

@@ -15,7 +15,8 @@ export default function Socials({ horizontal = false, cv = false }: Props) {
     <ul
       className={
         horizontal
-          ? listClass + " sm:flex-row sm:justify-around sm:gap-0 sm:col-span-2"
+          ? listClass +
+            " sm:col-span-2 sm:ml-8 sm:flex-row sm:justify-around sm:gap-0"
           : listClass + " sm:flex-col "
       }
     >
@@ -25,7 +26,7 @@ export default function Socials({ horizontal = false, cv = false }: Props) {
           target="_break"
           href="https://www.linkedin.com/in/adam-saunders-13a304142/"
         >
-          <BsLinkedin className="w-8 h-8 mr-2 text-sky-600" /> Linkedin
+          <BsLinkedin className="mr-2 h-8 w-8 text-sky-600" /> Linkedin
         </a>
       </li>
       <li>
@@ -34,7 +35,7 @@ export default function Socials({ horizontal = false, cv = false }: Props) {
           target="_break"
           href="https://github.com/AdamSaunders26"
         >
-          <BsGithub className="w-8 h-8 mr-2 text-sky-600" /> Github
+          <BsGithub className="mr-2 h-8 w-8 text-sky-600" /> Github
         </a>
       </li>
       {cv ? (
@@ -44,7 +45,7 @@ export default function Socials({ horizontal = false, cv = false }: Props) {
             target="_blank"
             href="Adam Saunders - Software Developer CV v2.3.pdf"
           >
-            <BsFiletypePdf className="w-8 h-8 mr-1 text-sky-600" /> CV
+            <BsFiletypePdf className="mr-1 h-8 w-8 text-sky-600" /> CV
           </a>
         </li>
       ) : null}
@@ -54,7 +55,7 @@ export default function Socials({ horizontal = false, cv = false }: Props) {
           target="_blank"
           href="mailto:contact@adam-saunders.dev"
         >
-          <HiOutlineMail className="w-8 h-8 mr-2 text-sky-600" />{" "}
+          <HiOutlineMail className="mr-2 h-8 w-8 text-sky-600" />{" "}
           contact@adam-saunders.dev
         </a>
       </li>
@@ -64,7 +65,7 @@ export default function Socials({ horizontal = false, cv = false }: Props) {
           target="_blank"
           href="mailto:contact@adam-saunders.dev"
         >
-          <HiOutlineMail className="w-8 h-8 mr-2 text-sky-600" /> Email
+          <HiOutlineMail className="mr-2 h-8 w-8 text-sky-600" /> Email
         </a>
       </li>
     </ul>

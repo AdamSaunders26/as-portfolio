@@ -9,11 +9,11 @@ import { FiExternalLink } from "react-icons/fi";
 
 interface Props {
   project: ProjectType[];
-  projectName: string;
-  githubURL: string;
-  hostedURL: string;
+  projectName?: string;
+  githubURL?: string;
+  hostedURL?: string;
   secondGithub?: string;
-  techArray: JSX.Element[];
+  techArray?: JSX.Element[];
 }
 
 export default function Carousel({
@@ -63,32 +63,16 @@ export default function Carousel({
     if (carouselRef.current) {
       setMaxScrollWidth(carouselRef.current.scrollWidth);
       setScrollSnapPoint(
-        (carouselRef.current.scrollWidth * 0.78) / project.length
+        (carouselRef.current.scrollWidth * 0.78) / project.length,
       );
     }
   }, [carouselRef.current?.scrollWidth]);
 
   return (
-    <section className=" grid grid-cols-12 my-4 py-4 rounded-md bg-white dark:bg-black ">
-      <div className="col-span-12 flex flex-col sm:flex-row place-self-center gap-2 ">
+    <section className=" my-1 grid grid-cols-12 rounded-md bg-white  dark:bg-black ">
+      <div className="col-span-12 flex flex-col gap-2 place-self-center sm:flex-row ">
         <div className="flex flex-col ">
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-0">
-            <div className="flex items-center justify-between place-self-center gap-2  text-sky-700 dark:text-sky-500">
-              <a target="_blank" href={githubURL}>
-                <AiFillGithub className="w-8 h-8" />
-              </a>
-              {secondGithub ? (
-                <a target="_blank" href={secondGithub}>
-                  <AiFillGithub className="w-8 h-8" />
-                </a>
-              ) : null}
-              <a target="_blank" href={hostedURL}>
-                <FiExternalLink className="w-6 h-6 m-1" />
-              </a>
-              <h3 className="  text-2xl font-bold place-self-center  bg-white dark:bg-black border-2 border-sky-600 dark:border-sky-500 rounded-md px-2">
-                {projectName}
-              </h3>
-            </div>
+          <div className="flex flex-col gap-2 sm:flex-row sm:gap-0">
             <CarouselIndicator
               carouselRef={carouselRef}
               projects={project}
@@ -96,11 +80,6 @@ export default function Carousel({
               currentProject={currentProject}
               setCurrentProject={setCurrentProject}
             />
-          </div>
-          <div className="flex flex-wrap gap-2 justify-center mt-2">
-            {techArray.map((logo, index) => {
-              return <React.Fragment key={index}>{logo}</React.Fragment>;
-            })}
           </div>
         </div>
       </div>

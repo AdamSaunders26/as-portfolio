@@ -29,7 +29,7 @@ export default function ContactFormInput({
   const inputType = formData[inputName as keyof formState];
 
   return (
-    <div className="flex flex-col mx-2">
+    <div className="mx-2 flex flex-col">
       <label
         htmlFor={inputName}
         className={inputType === "" ? "text-red-500" : ""}
@@ -49,16 +49,16 @@ export default function ContactFormInput({
             name="Message"
             maxLength={500}
             onChange={setFormData}
-            onClick={(e) => {
+            onBlur={(e) => {
               setFormData(e);
               setSubmitSuccess(false);
             }}
             value={formData.Message ? formData.Message : ""}
             className={
               formData.Message === ""
-                ? "rounded-md p-2  mt-2 border-2 font-normal dark:bg-neutral-900" +
+                ? "mt-2 rounded-md  border-2 p-2 font-normal dark:bg-neutral-900" +
                   errorClass
-                : "rounded-md p-2  mt-2 border-2 font-normal dark:bg-neutral-900" +
+                : "mt-2 rounded-md  border-2 p-2 font-normal dark:bg-neutral-900" +
                   validClass
             }
           />
@@ -72,7 +72,7 @@ export default function ContactFormInput({
           name={inputName}
           maxLength={100}
           onChange={setFormData}
-          onClick={(e) => {
+          onBlur={(e) => {
             setFormData(e);
             setSubmitSuccess(false);
           }}

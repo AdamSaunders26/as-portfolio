@@ -20,12 +20,12 @@ export default function CarouselDisplay({
       onScroll={(e) => {
         handleScroll(e);
       }}
-      className="  col-span-10 col-start-2 sm:col-span-10 flex mt-2 overflow-x-scroll snap-mandatory snap-x scroll-smooth scrollbar-thin  scrollbar-track-white dark:scrollbar-track-black scrollbar-thumb-sky-600 dark:scrollbar-thumb-sky-500 "
+      className="  scrollbar-thin scrollbar-track-white dark:scrollbar-track-black scrollbar-thumb-sky-600 dark:scrollbar-thumb-sky-500 col-span-12 mt-2 flex snap-x snap-mandatory overflow-x-scroll  scroll-smooth sm:col-span-10  sm:col-start-2 "
     >
       {projects.map(({ key, imageSrc, alt, details, slideName }, index) => {
         const [modalOpen, setModalOpen] = useState(false);
 
-        const projectClass = " snap-center basis-1/4 shrink-0 relative flex ";
+        const projectClass = " snap-center basis-1/4 shrink-0 relative flex  ";
         return (
           <div className={projectClass} key={key}>
             {modalOpen ? (
@@ -37,11 +37,11 @@ export default function CarouselDisplay({
             ) : null}
             <div
               className={
-                "w-60 mini:w-72 plus:w-[20rem] sm:w-[31rem] md:w-[32rem] lg:w-[46rem] xl:w-[60rem] 2xl:w-[78rem] rounded-md border-sky-600 dark:border-sky-500 border-4 mx-2 mb-2 "
+                "mini:w-64 plus:w-[20rem] mx-2 mb-2 w-60 rounded-md border-4 border-sky-600 bg-neutral-100 dark:border-sky-500 dark:bg-black sm:w-[30rem]  md:w-[17rem] lg:w-[24rem]  xl:w-[30rem] 2xl:w-[38rem] "
               }
             >
               <Image
-                className=" border-8 border-transparent rounded-xl hover:cursor-zoom-in"
+                className=" rounded-xl border-8 border-transparent hover:cursor-zoom-in"
                 src={imageSrc}
                 alt={alt}
                 priority={true}
@@ -50,13 +50,13 @@ export default function CarouselDisplay({
                   setModalOpen((curr) => !curr);
                 }}
               />
-              {slideName === "Login Page" ? (
-                <p className="text-red-500 p-2">
+              {/* {slideName === "Login Page" ? (
+                <p className="p-2 text-red-500">
                   Warning: Currently audio cannot be played on Safari or on iOS
                   devices to an issue with the way they handle audio
                 </p>
-              ) : null}
-              <p className=" p-2  ">{details}</p>
+              ) : null} */}
+              {/* <p className=" p-2  ">{details}</p> */}
             </div>
           </div>
         );

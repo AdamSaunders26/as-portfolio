@@ -10,10 +10,11 @@ import soundwaves3 from "../../images/soundwaves3.png";
 import portfolio1 from "../../images/portfolio1.png";
 import portfolio2 from "../../images/portfolio2.png";
 import portfolio3 from "../../images/portfolio3.png";
-import portfolio4 from "../../images/portfolio4.png";
-import portfolio5 from "../../images/portfolio5.png";
-import portfolio6 from "../../images/portfolio6.png";
+import appIdeaGenerator1 from "../../images/appIdeaGenerator1.png";
+import appIdeaGenerator2 from "../../images/appIdeaGenerator2.png";
+import appIdeaGenerator3 from "../../images/appIdeaGenerator3.png";
 import {
+  AppIdeaGeneratorTech,
   NCnewsAPITech,
   NCnewsTech,
   PortfolioTech,
@@ -112,11 +113,11 @@ export const Portfolio: ProjectType[] = [
   },
   {
     key: 1,
-    slideName: "Projects Carousel",
+    slideName: "Projects",
     imageSrc: portfolio2,
-    alt: "Screenshot of the projects page, showing the SoundWaves project",
+    alt: "Screenshot of the projects page, showing the several projects",
     details:
-      "The carousel was to display the projects was probably the most challenging section of the site as I didn't want to use a package like Swiper because it felt like something I could do myself and I wanted to test my abilities. I had already used the useRef hook for audio in SoundWaves so it was fairly easy to use it for the scroll bar here. Then it was simply a combination of flex and grid along with overflow and fixed positioning for the different slides. However, creating and indicator/selector proved tricky as different screen sizes scroll different amounts and it wasn't as simple as dividng the maximum scroll width by the number of slides.",
+      "The carousel I used to display the project images was probably the most challenging section of the site as I didn't want to use a package like Swiper because it felt like something I could do myself and I wanted to test my abilities. I had already used the useRef hook for audio in SoundWaves so it was fairly easy to use it for the scroll bar here. Then it was simply a combination of flex and grid along with overflow and fixed positioning for the different slides. However, creating an indicator/selector proved tricky as different screen sizes scroll different amounts and it wasn't as simple as dividng the maximum scroll width by the number of slides.",
   },
   {
     key: 2,
@@ -128,12 +129,40 @@ export const Portfolio: ProjectType[] = [
   },
 ];
 
-interface ProjectOverviewType {
+export const AppIdeaGenerator: ProjectType[] = [
+  {
+    key: 0,
+    slideName: "Generating",
+    imageSrc: appIdeaGenerator1,
+    alt: "Home page, generating page and idea list page of App Idea Generator",
+    details:
+      "For this project, I wanted to branch out into a different techonology - React Native. It was more different from React than I'd expected and simple things like styling text had to be done quite differently. However, Expo made it easy to test the prototype on my phone and I was able to get Tailwind (Nativewind) running to help me style the app. The way the app works, is that the user provides a focus for the ideas, such as music or engineering etc as well as a key feature and skill level. 5 ideas are then generated from these. If the text inputs are left blank, a random selection will be given.",
+  },
+  {
+    key: 1,
+    slideName: "Idea Lists",
+    imageSrc: appIdeaGenerator2,
+    alt: "Home page, idea list page and idea details page of App Idea Generator for art app ideas.",
+    details:
+      "To actually generate the ideas, OpenAI's GPT-3.5 model is used. A detailed prompt is sent to their API which returns an array of ideas, including the icons that can been seen on the Idea List. It took a little while to finetune the prompt to ensure consistency and reliablity for the response. Sometimes an invalid icon is provided which goes to a generic question mark as a fall back.",
+  },
+  {
+    key: 2,
+    slideName: "Idea Description",
+    imageSrc: appIdeaGenerator3,
+    alt: "Home page, idea list page and idea details page of App Idea Generator for video app ideas.",
+    details:
+      "OpenAI's GPT model is very capable and will generate ideas around almost any theme, including popular media or specific technologies. If I was to develop this project further, I would like to implement a list of favourited ideas that the user can view at a later time and share functionality where the user could send an idea to a friend or colleague.",
+  },
+];
+
+export interface ProjectOverviewType {
   project: ProjectType[];
   projectName: string;
+  slug: string;
   githubURL: string;
   secondGithub?: string;
-  hostedURL: string;
+  hostedURL?: string;
   techArray: JSX.Element[];
 }
 
@@ -141,14 +170,23 @@ export const allProjects: ProjectOverviewType[] = [
   {
     project: SoundWaves,
     projectName: "SoundWaves",
+    slug: "soundwaves",
     githubURL: "https://github.com/AdamSaunders26/as-front-end-sound-waves",
     secondGithub: "https://github.com/AdamSaunders26/back-end-sound-waves",
     hostedURL: "https://aa-sound-waves.vercel.app/",
     techArray: soundWavesTech,
   },
   {
+    project: AppIdeaGenerator,
+    projectName: "App Idea Generator",
+    slug: "app-idea-generator",
+    githubURL: "https://github.com/AdamSaunders26/IdeaGenerator",
+    techArray: AppIdeaGeneratorTech,
+  },
+  {
     project: NCnews,
     projectName: "NC News",
+    slug: "nc-news",
     githubURL: "https://github.com/AdamSaunders26/fe-nc-news",
     hostedURL: "https://adam-saunders-front-end-project.netlify.app/",
     techArray: NCnewsTech,
@@ -156,6 +194,7 @@ export const allProjects: ProjectOverviewType[] = [
   {
     project: NCnewsAPI,
     projectName: "NC News API",
+    slug: "nc-news-api",
     githubURL: "https://github.com/AdamSaunders26/nc-news-backendProject",
     hostedURL: "https://nc-news-app.onrender.com/api",
     techArray: NCnewsAPITech,
@@ -163,6 +202,7 @@ export const allProjects: ProjectOverviewType[] = [
   {
     project: Portfolio,
     projectName: "Portfolio",
+    slug: "portfolio",
     githubURL: "https://github.com/AdamSaunders26/as-portfolio",
     hostedURL: "https://www.adam-saunders.dev/",
     techArray: PortfolioTech,
