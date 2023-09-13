@@ -4,7 +4,7 @@ import { BsSunFill, BsMoonFill } from "react-icons/bs";
 interface Props {
   darkMode: boolean;
   setDarkMode: Dispatch<SetStateAction<boolean>>;
-  mobile: boolean;
+  mobile?: boolean;
 }
 
 export default function DarkModeButton({
