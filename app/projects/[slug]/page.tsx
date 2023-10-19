@@ -27,14 +27,14 @@ export default function ProjectDetailsPage({
   if (currentProject) {
     return (
       <main className="mx-2 mt-28 sm:mt-20 ">
-        <div className="-mb-8 ml-4 mt-2 flex w-fit  items-center gap-2 rounded-md border-2 border-white p-2 text-lg font-semibold hover:cursor-pointer hover:border-sky-600 dark:border-neutral-900 hover:dark:border-sky-600">
+        <div className="-mt-2 mb-2 ml-2 flex w-fit items-center gap-2 rounded-md  border-2 border-white p-2 text-lg font-semibold hover:cursor-pointer hover:border-sky-600 dark:border-neutral-900 hover:dark:border-sky-600 sm:-mb-8  ">
           <FiArrowLeft className="h-6 w-6" />
           <Link href={`/projects`}>Back to projects</Link>
         </div>
         <section className="flex flex-col items-center">
           <ProjectDetailsHeader currentProject={currentProject} />
           {currentProject.project.map((slide) => {
-            return <ProjectDetailsCard slide={slide} />;
+            return <ProjectDetailsCard key={slide.key} slide={slide} />;
           })}
         </section>
       </main>

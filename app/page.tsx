@@ -9,7 +9,7 @@ import FeaturedProject from "./FeaturedProject";
 
 export default function Home() {
   return (
-    <main className=" mx-4  mt-24 grid h-full grid-cols-1 items-center sm:mt-16  sm:grid-cols-3 ">
+    <main className=" mx-4  mt-24 flex h-full flex-col items-center sm:mt-16  sm:grid  sm:grid-cols-3 ">
       <div className="mx-4 mb-2 flex  flex-col">
         <Image
           className="  my-4 h-64 w-64 place-self-center rounded-full object-cover sm:max-h-[36rem]"
@@ -19,7 +19,6 @@ export default function Home() {
           alt="Adam smiling and looking into the camera"
         />
       </div>
-      {/* <div className="col-span-2 sm:grid sm:grid-rows-2"> */}
       <article className="col-span-2 mt-4 flex h-max w-full flex-col justify-center place-self-center rounded-md bg-white px-4 py-2 dark:bg-black sm:mt-4">
         <div className="border-b-2 border-sky-600">
           <h2 className="text-2xl font-bold text-sky-700 dark:text-sky-500">
@@ -54,7 +53,6 @@ export default function Home() {
         </p>
       </article>
       <FeaturedProject />
-      {/* </div> */}
       <Socials horizontal={true} cv={true} />
     </main>
   );

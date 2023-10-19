@@ -178,7 +178,7 @@ export const allProjects: ProjectOverviewType[] = [
   },
   {
     project: AppIdeaGenerator,
-    projectName: "App Idea Generator",
+    projectName: "App Idea Gen",
     slug: "app-idea-generator",
     githubURL: "https://github.com/AdamSaunders26/IdeaGenerator",
     techArray: AppIdeaGeneratorTech,
