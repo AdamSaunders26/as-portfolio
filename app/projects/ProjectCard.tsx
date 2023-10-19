@@ -3,6 +3,7 @@ import { ProjectType } from "../data/projects";
 import Carousel from "./Carousel";
 import { FiExternalLink, FiArrowRight } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
+import Link from "next/link";
 
 interface Props {
   projectName: string;
@@ -11,6 +12,7 @@ interface Props {
   githubURL: string;
   secondGithub?: string;
   hostedURL?: string;
+  slug: string;
 }
 
 export default function ProjectCard({
@@ -20,14 +22,10 @@ export default function ProjectCard({
   githubURL,
   secondGithub,
   hostedURL,
+  slug,
 }: Props) {
   return (
-    <section
-      onClick={() => {
-        console.log("click");
-      }}
-      className=" m-2 flex flex-col rounded-md   bg-white p-2  dark:bg-black"
-    >
+    <section className=" m-2 flex flex-col rounded-md   bg-white p-2  dark:bg-black">
       <div className=" mb-[0.25rem] flex items-center justify-between gap-2 place-self-center  text-sky-700 dark:text-sky-500">
         <a target="_blank" href={githubURL}>
           <AiFillGithub className="h-8 w-8" />
@@ -45,13 +43,13 @@ export default function ProjectCard({
         </a>
       </div>
       <Carousel project={project} />
-      <div className="mt-2 flex flex-wrap justify-center gap-2">
+      {/* <div className="mt-2 flex flex-wrap justify-center gap-2">
         {techArray.map((logo, index) => {
           return <React.Fragment key={index}>{logo}</React.Fragment>;
         })}
-      </div>
-      <div className="flex items-center gap-2 place-self-end rounded-md border-2 border-white p-2 text-lg font-semibold hover:cursor-pointer hover:border-sky-600 dark:border-black">
-        <p>See more</p>
+      </div> */}
+      <div className="flex items-center gap-2 place-self-end rounded-md border-2 border-white p-2 text-lg font-semibold hover:cursor-pointer hover:border-sky-600 dark:border-black hover:dark:border-sky-600">
+        <Link href={`/projects/${slug}`}>See more</Link>
         <FiArrowRight className="h-6 w-6" />
       </div>
     </section>
