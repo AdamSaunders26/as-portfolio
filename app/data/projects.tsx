@@ -185,7 +185,7 @@ export interface ProjectOverviewType {
   githubURL: string;
   secondGithub?: string;
   hostedURL?: string;
-  techArray: JSX.Element[];
+  techArray: (string | JSX.Element)[][];
 }
 
 export const allProjects: ProjectOverviewType[] = [

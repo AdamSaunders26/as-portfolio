@@ -35,7 +35,7 @@ export default function ProjectCard({
             <AiFillGithub className="h-8 w-8" />
           </a>
         ) : null}
-        <h3 className=" w-fit place-self-center   rounded-md  border-2 border-sky-600 bg-white px-2 text-2xl font-bold text-neutral-800 dark:border-sky-500 dark:bg-black dark:text-white">
+        <h3 className=" w-fit place-self-center rounded-md  border-2  border-sky-600 bg-white px-2 text-center text-2xl font-bold text-neutral-800 dark:border-sky-500 dark:bg-black dark:text-white">
           {projectName}
         </h3>
         <a target="_blank" href={hostedURL}>

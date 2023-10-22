@@ -17,7 +17,7 @@ export default function ProjectDetailsHeader({ currentProject }: Props) {
       <div className="flex items-center gap-2">
         <GithubLink url={githubURL} />
         {secondGithub ? <GithubLink url={secondGithub} /> : null}
-        <h2 className="flex w-fit  rounded-md border-2 border-sky-600 p-2 text-3xl font-bold dark:border-sky-500">
+        <h2 className="flex w-fit  rounded-md border-2 border-sky-600 p-2 text-center text-3xl font-bold dark:border-sky-500">
           {projectName}
         </h2>
         {hostedURL ? <ExternalLink url={hostedURL} /> : null}

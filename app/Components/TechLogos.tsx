@@ -6,7 +6,6 @@ export default function TechLogos({
   techArray: (string | JSX.Element)[][];
 }) {
   return techArray.map((logo, index) => {
-    const tooltipClass = ``;
     return (
       <div className="group relative" key={index}>
         {logo[1]}{" "}
