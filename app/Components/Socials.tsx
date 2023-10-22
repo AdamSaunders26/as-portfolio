@@ -8,7 +8,7 @@ interface Props {
 
 export default function Socials({ horizontal = false, cv = false }: Props) {
   const listClass =
-    "mx-4 my-2 sm:mx-0  flex flex-wrap  justify-center gap-2   text-sky-700 dark:text-sky-500 font-semibold text-lg";
+    "mx-4 my-2 sm:mx-0  flex flex-wrap pb-4  justify-center gap-2  text-sky-700 dark:text-sky-500 font-semibold text-lg";
   const logoClass =
     "flex items-center mt-2  text-sm sm:text-base sm:mt-4 sm:ml-4 sm:w-max";
   return (
@@ -16,7 +16,7 @@ export default function Socials({ horizontal = false, cv = false }: Props) {
       className={
         horizontal
           ? listClass +
-            " sm:col-span-2 sm:ml-8 sm:flex-row sm:justify-around sm:gap-0"
+            " sm:col-span-3 sm:ml-8 sm:flex-row sm:justify-around sm:gap-0"
           : listClass + " sm:flex-col "
       }
     >
@@ -51,7 +51,7 @@ export default function Socials({ horizontal = false, cv = false }: Props) {
       ) : null}
       <li>
         <a
-          className={logoClass + " hidden sm:flex"}
+          className={logoClass + " hidden  sm:flex"}
           target="_blank"
           href="mailto:contact@adam-saunders.dev"
         >
@@ -61,7 +61,7 @@ export default function Socials({ horizontal = false, cv = false }: Props) {
       </li>
       <li>
         <a
-          className={logoClass + " sm:hidden"}
+          className={logoClass + " sm:hidden "}
           target="_blank"
           href="mailto:contact@adam-saunders.dev"
         >

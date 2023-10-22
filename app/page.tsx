@@ -5,27 +5,28 @@ import Image from "next/image";
 import profilePic2 from "/images/profilePic2.jpg";
 import Socials from "./Components/Socials";
 import Pronouns from "./(app)/Pronouns";
+import FeaturedProject from "./FeaturedProject";
 
 export default function Home() {
   return (
-    <main className=" mx-4  mt-24 sm:mt-16 h-full grid grid-cols-1 items-center  sm:grid-cols-2">
-      <div className="flex flex-col mb-2  mx-4">
+    <main className=" mx-4  mt-24 flex h-full flex-col items-center sm:mt-16  sm:grid  sm:grid-cols-3 ">
+      <div className="mx-4 mb-2 flex  flex-col">
         <Image
-          className="rounded-full  w-64 h-64 0 my-4 sm:max-h-[36rem] place-self-center object-cover"
+          className="  my-4 h-64 w-64 place-self-center rounded-full object-cover sm:max-h-[36rem]"
           src={profilePic2}
           priority={true}
           placeholder="blur"
           alt="Adam smiling and looking into the camera"
         />
       </div>
-      <article className="place-self-center px-4 py-2 flex flex-col h-max justify-center mt-4 w-full rounded-md bg-white dark:bg-black sm:mt-4">
-        <div className="border-sky-600 border-b-2">
+      <article className="col-span-2 mt-4 flex h-max w-full flex-col justify-center place-self-center rounded-md bg-white px-4 py-2 dark:bg-black sm:mt-4">
+        <div className="border-b-2 border-sky-600">
           <h2 className="text-2xl font-bold text-sky-700 dark:text-sky-500">
             Adam Saunders <Pronouns subject="he" object="him" />
           </h2>
-          <h3 className="text-xl mb-2 font-bold  ">Software Developer</h3>
+          <h3 className="mb-2 text-xl font-bold  ">Software Developer</h3>
         </div>
-        <p className="mt-2 pb-2 border-sky-600 border-b-2">
+        <p className="mt-2 border-b-2 border-sky-600 pb-2">
           Recent{" "}
           <a
             className="text-sky-700 dark:text-sky-500 "
@@ -51,6 +52,7 @@ export default function Home() {
           at your company.
         </p>
       </article>
+      <FeaturedProject />
       <Socials horizontal={true} cv={true} />
     </main>
   );

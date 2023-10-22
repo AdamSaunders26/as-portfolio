@@ -23,9 +23,13 @@ export default function DarkModeHTML({ font, children }: Props) {
   return (
     <html
       lang="en"
-      className={darkMode ? font.className + " dark " : font.className}
+      className={
+        darkMode
+          ? font.className + " dark 2xl:text-2xl"
+          : font.className + "2xl:text-2xl"
+      }
     >
-      <body className="bg-neutral-200 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 h-screen container mx-auto flex flex-col scrollbar-thin dark:scrollbar-track-neutral-900 dark:scrollbar-thumb-sky-500 scrollbar-track-neutral-200 scrollbar-thumb-sky-600 ">
+      <body className="scrollbar-thin dark:scrollbar-track-neutral-900 dark:scrollbar-thumb-sky-500 scrollbar-track-neutral-200 scrollbar-thumb-sky-600 container mx-auto flex h-screen flex-col bg-neutral-200 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-200  ">
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         {children}
       </body>
