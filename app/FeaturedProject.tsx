@@ -1,5 +1,6 @@
 import Image from "next/image";
 import classroomToolkitImg from "../images/classroomtoolkit1.png";
+import Link from "next/link";
 export default function FeaturedProject() {
   return (
     <article className=" sn:py-4 col-span-3 mt-4 h-fit w-fit place-self-center rounded-md bg-white px-4 py-2 dark:bg-black">
@@ -27,9 +28,12 @@ export default function FeaturedProject() {
             trackers which could be used for keeping track of which pupils have
             completed homework or as a behaviour record.
           </p>
-          <button className="my-2 place-self-end rounded-md bg-sky-600 p-2 text-white ">
+          <Link
+            className="my-2 place-self-end rounded-md bg-sky-600 p-2 text-white "
+            href={"/projects/classroom-toolkit"}
+          >
             Visit project page
-          </button>
+          </Link>
         </div>
       </div>
     </article>

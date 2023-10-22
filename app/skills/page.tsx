@@ -16,11 +16,11 @@ export default function SkillsPage() {
         This is a non-exhaustive list of technologies I have worked with in the
         past and have a good working knowledge of.
       </p>
-      <div className="flex justify-center ">
+      <div className="flex flex-col justify-center sm:flex-row ">
         <TechSection sectionName={"Languages"} techArray={languageArr} />
         <TechSection sectionName={"Other"} techArray={otherTechs} />
       </div>
-      <div className="flex justify-center ">
+      <div className="flex flex-col justify-center sm:flex-row ">
         <TechSection sectionName={"Front-End"} techArray={frontEndTechs} />
         <TechSection sectionName={"Back-End"} techArray={backEndTechs} />
       </div>
