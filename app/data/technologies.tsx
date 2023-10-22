@@ -62,52 +62,53 @@ export const otherTechs: [string, string, JSX.Element][] = [
   ["OpenAI", "https://openai.com/", <OpenAiLogo />],
 ];
 export const NCnewsAPITech = [
-  <JavaScriptLogo isCarousel={true} />,
-  <NodeLogo isCarousel={true} />,
-  <MiniExpressLogo isCarousel={true} />,
-  <PostgreSQLLogo isCarousel={true} />,
-  <JestLogo isCarousel={true} />,
+  ["JavaScript", <JavaScriptLogo isCarousel={true} />],
+  ["Node", <NodeLogo isCarousel={true} />],
+  ["Express", <MiniExpressLogo isCarousel={true} />],
+  ["PostgreSQL", <PostgreSQLLogo isCarousel={true} />],
+  ["Jest", <JestLogo isCarousel={true} />],
 ];
 
 export const NCnewsTech = [
-  <JavaScriptLogo isCarousel={true} />,
-  <ReactLogo isCarousel={true} />,
-  <CSSLogo isCarousel={true} />,
+  ["JavaScript", <JavaScriptLogo isCarousel={true} />],
+  ["React", <ReactLogo isCarousel={true} />],
+  ["CSS 3", <CSSLogo isCarousel={true} />],
 ];
 
 export const soundWavesTech = [
-  <TypeScriptLogo isCarousel={true} />,
-  <NextLogo isCarousel={true} />,
-  <ReactLogo isCarousel={true} />,
-  <TailwindLogo isCarousel={true} />,
-  <NodeLogo isCarousel={true} />,
-  <MiniExpressLogo isCarousel={true} />,
-  <SupabaseLogo isCarousel={true} />,
-  <PostgreSQLLogo isCarousel={true} />,
-  <JestLogo isCarousel={true} />,
+  ["Typescript", <TypeScriptLogo isCarousel={true} />],
+  ["Next.js", <NextLogo isCarousel={true} />],
+  ["React", <ReactLogo isCarousel={true} />],
+  ["Tailwind", <TailwindLogo isCarousel={true} />],
+  ["Node", <NodeLogo isCarousel={true} />],
+  ["Express", <MiniExpressLogo isCarousel={true} />],
+  ["Supabase", <SupabaseLogo isCarousel={true} />],
+  ["PostgreSQL", <PostgreSQLLogo isCarousel={true} />],
+  ["Jest", <JestLogo isCarousel={true} />],
 ];
 
 export const PortfolioTech = [
-  <TypeScriptLogo isCarousel={true} />,
-  <NextLogo isCarousel={true} />,
-  <ReactLogo isCarousel={true} />,
-  <TailwindLogo isCarousel={true} />,
+  ["Typescript", <TypeScriptLogo isCarousel={true} />],
+  ["Next.js", <NextLogo isCarousel={true} />],
+  ["React", <ReactLogo isCarousel={true} />],
+  ,
+  ["Tailwind", <TailwindLogo isCarousel={true} />],
 ];
 
 export const AppIdeaGeneratorTech = [
-  <TypeScriptLogo isCarousel={true} />,
-  <ReactNativeLogo isCarousel={true} />,
-  <TailwindLogo isCarousel={true} />,
-  <ExpoLogo isCarousel={true} />,
-  <OpenAiLogo isCarousel={true} />,
+  ["Typescript", <TypeScriptLogo isCarousel={true} />],
+  ["React Native", <ReactNativeLogo isCarousel={true} />],
+  ["Tailwind", <TailwindLogo isCarousel={true} />],
+  ["Expo", <ExpoLogo isCarousel={true} />],
+  ["OpenAI", <OpenAiLogo isCarousel={true} />],
 ];
 export const ClassroomToolkitTech = [
-  <TypeScriptLogo isCarousel={true} />,
-  <NextLogo isCarousel={true} />,
-  <ReactLogo isCarousel={true} />,
-  <TailwindLogo isCarousel={true} />,
-  <PrismaLogo isCarousel={true} />,
-  <ZodLogo isCarousel={true} />,
-  <ShadcnLogo isCarousel={true} />,
-  <NextAuthLogo isCarousel={true} />,
+  ["Typescript", <TypeScriptLogo isCarousel={true} />],
+  ["Next.js", <NextLogo isCarousel={true} />],
+  ["React", <ReactLogo isCarousel={true} />],
+  ["Tailwind", <TailwindLogo isCarousel={true} />],
+  ["Prisma", <PrismaLogo isCarousel={true} />],
+  ["Zod", <ZodLogo isCarousel={true} />],
+  ["Shadcn UI", <ShadcnLogo isCarousel={true} />],
+  ["Next-Auth", <NextAuthLogo isCarousel={true} />],
 ];

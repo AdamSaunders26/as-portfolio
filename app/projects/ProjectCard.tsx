@@ -25,7 +25,7 @@ export default function ProjectCard({
   slug,
 }: Props) {
   return (
-    <section className=" m-2 flex flex-col rounded-md   bg-white p-2  dark:bg-black">
+    <section className=" m-2 flex flex-col rounded-md bg-white   p-2 pt-4  dark:bg-black">
       <div className=" mb-[0.25rem] flex items-center justify-between gap-2 place-self-center  text-sky-700 dark:text-sky-500">
         <a target="_blank" href={githubURL}>
           <AiFillGithub className="h-8 w-8" />
