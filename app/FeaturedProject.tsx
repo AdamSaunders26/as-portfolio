@@ -1,5 +1,5 @@
 import Image from "next/image";
-import classroomToolkitImg from "../images/classroomToolkit-FP.png";
+import classroomToolkitImg from "../images/classroomtoolkit1.png";
 export default function FeaturedProject() {
   return (
     <article className=" sn:py-4 col-span-3 mt-4 h-fit w-fit place-self-center rounded-md bg-white px-4 py-2 dark:bg-black">

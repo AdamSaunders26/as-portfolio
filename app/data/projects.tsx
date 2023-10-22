@@ -13,8 +13,11 @@ import portfolio3 from "../../images/portfolio3.png";
 import appIdeaGenerator1 from "../../images/appIdeaGenerator1.png";
 import appIdeaGenerator2 from "../../images/appIdeaGenerator2.png";
 import appIdeaGenerator3 from "../../images/appIdeaGenerator3.png";
+import classroomToolkit1 from "../../images/classroomtoolkit1.png";
+import classroomToolkit2 from "../../images/classroomtoolkit2.png";
 import {
   AppIdeaGeneratorTech,
+  ClassroomToolkitTech,
   NCnewsAPITech,
   NCnewsTech,
   PortfolioTech,
@@ -156,6 +159,25 @@ export const AppIdeaGenerator: ProjectType[] = [
   },
 ];
 
+export const ClassroomToolkit: ProjectType[] = [
+  {
+    key: 0,
+    slideName: "Class Manager",
+    imageSrc: classroomToolkit1,
+    alt: "The class manager view of Classroom Toolkit",
+    details:
+      "Classroom Toolkit primarily funcations as a class manager because many other planned features will rely upon having a class of students to use. Children can be added to classes on at a time or a class list can be pasted in for convenience. The entire site is built with Next.js and uses route handlers to act as a backend API to integrate with a PostgreSQL database where students and classes are stored. ",
+  },
+  {
+    key: 1,
+    slideName: "Upcoming features",
+    imageSrc: classroomToolkit2,
+    alt: "A picture saying 'planned features'",
+    details:
+      "I have many features planned which I would like to implement with Classroom Toolkit. This includes a seating planner tool, timetable builder, tracking systems as well as more generic tools such as name randomisers and timers.",
+  },
+];
+
 export interface ProjectOverviewType {
   project: ProjectType[];
   projectName: string;
@@ -167,6 +189,14 @@ export interface ProjectOverviewType {
 }
 
 export const allProjects: ProjectOverviewType[] = [
+  {
+    project: ClassroomToolkit,
+    projectName: "Classroom Toolkit",
+    slug: "classroom-toolkit",
+    githubURL: "https://github.com/AdamSaunders26/Classroom-toolkit/tree/main",
+    hostedURL: "https://www.classroom-toolkit.co.uk/",
+    techArray: ClassroomToolkitTech,
+  },
   {
     project: SoundWaves,
     projectName: "SoundWaves",

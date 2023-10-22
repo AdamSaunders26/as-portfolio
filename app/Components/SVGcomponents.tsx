@@ -732,3 +732,237 @@ export function GithubLogo({ isCarousel }: { isCarousel?: boolean }) {
     </svg>
   );
 }
+
+export function PrismaLogo({ isCarousel }: { isCarousel?: boolean }) {
+  return (
+    <svg
+      className={isCarousel ? carouselSize : SVGsize}
+      fill="currentColor"
+      viewBox="0.34 -0.059977834648891726 33.11668247084116 39.96397783464889"
+      xmlns="http://www.w3.org/2000/svg"
+      width="2047"
+      height="2500"
+    >
+      <path
+        d="M32.908 30.475L19.151 1.26a2.208 2.208 0 0 0-1.88-1.257 2.183 2.183 0 0 0-2.01 1.042L.34 25.212a2.26 2.26 0 0 0 .025 2.426L7.66 38.935a2.346 2.346 0 0 0 2.635.969l21.17-6.262a2.32 2.32 0 0 0 1.457-1.258 2.27 2.27 0 0 0-.013-1.91zm-3.08 1.253L11.864 37.04c-.548.163-1.074-.312-.96-.865l6.418-30.731c.12-.575.914-.666 1.165-.134l11.881 25.23a.858.858 0 0 1-.541 1.188z"
+        clipRule="evenodd"
+        fillRule="evenodd"
+      />
+    </svg>
+  );
+}
+
+export function ZodLogo({ isCarousel }: { isCarousel?: boolean }) {
+  return (
+    <svg
+      className={
+        isCarousel
+          ? carouselSize + " rounded-full p-1 dark:bg-white"
+          : SVGsize + " rounded-full p-1 dark:bg-white"
+      }
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 256 203"
+    >
+      <defs>
+        <filter
+          id="logosZod0"
+          width="105.2%"
+          height="106.5%"
+          x="-2.2%"
+          y="-2.8%"
+          filterUnits="objectBoundingBox"
+        >
+          <feOffset
+            dx="1"
+            dy="1"
+            in="SourceAlpha"
+            result="shadowOffsetOuter1"
+          />
+          <feGaussianBlur
+            in="shadowOffsetOuter1"
+            result="shadowBlurOuter1"
+            stdDeviation="2"
+          />
+          <feColorMatrix
+            in="shadowBlurOuter1"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.36 0"
+          />
+        </filter>
+        <path
+          id="logosZod1"
+          fill="#000"
+          d="M200.42 0H53.63L0 53.355l121.76 146.624l9.714-10.9L252 53.857L200.42 0Zm-5.362 12.562l39.84 41.6l-112.8 126.558L17 54.162l41.815-41.6h136.243Z"
+        />
+      </defs>
+      <g transform="translate(2 1.51)">
+        <path
+          fill="#18253F"
+          d="M58.816 12.522h136.278l39.933 41.691l-112.989 126.553L16.957 54.213z"
+        />
+        <path
+          fill="#274D82"
+          d="M149.427 150.875H96.013l-24.124-29.534l68.364-.002l.002-4.19h39.078z"
+        />
+        <path
+          fill="#274D82"
+          d="M223.56 42.323L76.178 127.414l-19.226-24.052l114.099-65.877l-2.096-3.631l30.391-17.546zm-78.964-29.759L33.93 76.457L16.719 54.972l74.095-42.779z"
+        />
+        <use filter="url(#logosZod0)" href="#logosZod1" />
+        <use fill="#3068B7" href="#logosZod1" />
+      </g>
+    </svg>
+  );
+}
+
+export function ShadcnLogo({ isCarousel }: { isCarousel?: boolean }) {
+  return (
+    <svg
+      className={
+        isCarousel ? carouselSize + " rounded-md " : SVGsize + " rounded-md "
+      }
+      version="1.1"
+      viewBox="0.0 0.0 256.0 256.0"
+      strokeLinecap="square"
+      strokeMiterlimit="10"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <clipPath id="p.0">
+        <path d="m0 0l256.0 0l0 256.0l-256.0 0l0 -256.0z" clipRule="nonzero" />
+      </clipPath>
+      <g clipPath="url(#p.0)">
+        <path
+          fill="#000000"
+          d="m0 0l256.0 0l0 256.0l-256.0 0z"
+          fillRule="evenodd"
+        />
+        <path
+          fill="#ffffff"
+          d="m169.35432 62.937008l0 0c0 -3.2702217 2.6510468 -5.921261 5.9212646 -5.921261l0 0c1.5704193 0 3.0765076 0.62384796 4.186966 1.7342987c1.1104431 1.1104507 1.7342987 2.6165466 1.7342987 4.186962l0 0c0 3.2702217 -2.6510468 5.921261 -5.9212646 5.921261l0 0c-3.270218 0 -5.9212646 -2.6510391 -5.9212646 -5.921261z"
+          fillRule="evenodd"
+        />
+        <path
+          fill="#ffffff"
+          d="m56.973755 175.38583l0 0c0 -3.2702332 2.6510353 -5.9212646 5.921257 -5.9212646l0 0c1.5704193 0 3.0765152 0.62384033 4.186966 1.7342987c1.1104507 1.1104431 1.7342987 2.6165466 1.7342987 4.186966l0 0c0 3.270218 -2.6510391 5.9212494 -5.9212646 5.9212494l0 0c-3.2702217 0 -5.921257 -2.6510315 -5.921257 -5.9212494z"
+          fillRule="evenodd"
+        />
+        <path
+          fill="#000000"
+          fillOpacity="0.0"
+          d="m62.787403 175.44882l112.12599 -112.031494"
+          fillRule="evenodd"
+        />
+        <path
+          stroke="#ffffff"
+          strokeWidth="12.0"
+          strokeLinejoin="round"
+          strokeLinecap="butt"
+          d="m62.787403 175.44882l112.12599 -112.031494"
+          fillRule="evenodd"
+        />
+        <path
+          fill="#ffffff"
+          d="m181.1968 127.99986l0 0c0 -3.278923 2.658081 -5.9370117 5.9369965 -5.9370117l0 0c1.5746002 0 3.0847015 0.62550354 4.198105 1.7389069c1.1134033 1.113411 1.7389069 2.6235123 1.7389069 4.198105l0 0c0 3.2789154 -2.6580963 5.9370117 -5.9370117 5.9370117l0 0c-3.2789154 0 -5.9369965 -2.6580963 -5.9369965 -5.9370117z"
+          fillRule="evenodd"
+        />
+        <path
+          fill="#000000"
+          fillOpacity="0.0"
+          d="m128.32152 187.0641l58.456696 -58.67717"
+          fillRule="evenodd"
+        />
+        <path
+          stroke="#ffffff"
+          strokeWidth="12.0"
+          strokeLinejoin="round"
+          strokeLinecap="butt"
+          d="m128.32152 187.0641l58.456696 -58.67717"
+          fillRule="evenodd"
+        />
+        <path
+          fill="#ffffff"
+          d="m122.06293 187.24396l0 0c0 -3.2789154 2.6580887 -5.9370117 5.937004 -5.9370117l0 0c1.5745926 0 3.084694 0.62550354 4.198097 1.7389069c1.1134033 1.1134033 1.7389069 2.6235046 1.7389069 4.198105l0 0c0 3.2789154 -2.658081 5.9370117 -5.937004 5.9370117l0 0c-3.2789154 0 -5.937004 -2.6580963 -5.937004 -5.9370117z"
+          fillRule="evenodd"
+        />
+      </g>
+    </svg>
+  );
+}
+
+export function NextAuthLogo({ isCarousel }: { isCarousel?: boolean }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={isCarousel ? carouselSize : SVGsize}
+      fill="none"
+      viewBox="0 0 20 20"
+    >
+      <path
+        fill="#D9D9D9"
+        d="M3.719 3.93c1.909-.563 4.737-1.406 5.93-1.762.368-.11.759-.11 1.128-.003 1.149.337 3.821 1.123 5.888 1.758a.983.983 0 01.693.96c-.24 10.104-5.338 12.527-6.774 13.01a1.16 1.16 0 01-.746.002c-1.442-.481-6.584-2.9-6.829-12.998a.99.99 0 01.71-.967z"
+      ></path>
+      <mask
+        id="mask0_156_252"
+        style={{ maskType: "alpha" }}
+        width="15"
+        height="16"
+        x="3"
+        y="2"
+        maskUnits="userSpaceOnUse"
+      >
+        <path
+          fill="#D9D9D9"
+          d="M3.719 3.93c1.909-.563 4.737-1.406 5.93-1.762.368-.11.759-.11 1.128-.003 1.149.337 3.821 1.123 5.888 1.758a.983.983 0 01.693.96c-.24 10.104-5.338 12.527-6.774 13.01a1.16 1.16 0 01-.746.002c-1.442-.481-6.584-2.9-6.829-12.998a.99.99 0 01.71-.967z"
+        ></path>
+      </mask>
+      <g mask="url(#mask0_156_252)">
+        <path
+          fill="url(#paint0_linear_156_252)"
+          d="M10.211 9.775L10.1 1.718l7.718 2.085-7.606 5.972z"
+        ></path>
+        <path
+          fill="url(#paint1_linear_156_252)"
+          d="M10.211 9.775V2l-7.38 1.972L1.817 8.76l3.211 5.014 5.183-4z"
+        ></path>
+        <path
+          fill="url(#paint2_linear_156_252)"
+          d="M17.591 3.972L4.915 13.775v4.45h12.508l.169-14.253z"
+        ></path>
+      </g>
+      <defs>
+        <linearGradient
+          id="paint0_linear_156_252"
+          x1="10.211"
+          x2="15.62"
+          y1="2"
+          y2="5.549"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#19AAE8"></stop>
+          <stop offset="1" stopColor="#1EA5F1"></stop>
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_156_252"
+          x1="3.056"
+          x2="10.211"
+          y1="4.141"
+          y2="9.662"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#2BE2B8"></stop>
+          <stop offset="1" stopColor="#19B9E3"></stop>
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_156_252"
+          x1="17.31"
+          x2="7.958"
+          y1="4.028"
+          y2="16.986"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#925CDF"></stop>
+          <stop offset="1" stopColor="#CC42E5"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
