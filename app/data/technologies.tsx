@@ -91,7 +91,6 @@ export const PortfolioTech = [
   ["Typescript", <TypeScriptLogo isCarousel={true} />],
   ["Next.js", <NextLogo isCarousel={true} />],
   ["React", <ReactLogo isCarousel={true} />],
-  ,
   ["Tailwind", <TailwindLogo isCarousel={true} />],
 ];
 

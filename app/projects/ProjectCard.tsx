@@ -7,7 +7,7 @@ import Link from "next/link";
 
 interface Props {
   projectName: string;
-  techArray: JSX.Element[];
+  techArray: (string | JSX.Element)[][];
   project: ProjectType[];
   githubURL: string;
   secondGithub?: string;
