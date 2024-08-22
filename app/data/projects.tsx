@@ -246,7 +246,7 @@ export const allProjects: ProjectOverviewType[] = [
     project: ReadingGenie,
     projectName: "Reading Genie",
     slug: "reading-genie",
-    githubURL: "https://github.com/AdamSaunders26/Reading-Genie/settings",
+    githubURL: "https://github.com/AdamSaunders26/Reading-Genie",
     hostedURL: "https://reading-genie.vercel.app/genie",
     techArray: ReadingGenieTech,
   },
