@@ -1,5 +1,6 @@
 import Image from "next/image";
 import classroomToolkitImg from "../images/classroomtoolkit1.png";
+import bcatImg from "../images/bcat2.png";
 import Link from "next/link";
 export default function FeaturedProject() {
   return (
@@ -7,12 +8,12 @@ export default function FeaturedProject() {
       <h3 className="text-2xl">
         Currently working on:{"  "}
         <span className="font-bold text-sky-700 dark:text-sky-500">
-          Classroom Toolkit
+          Band Coach Arranger Tool
         </span>
       </h3>
       <div className="flex   flex-col  sm:flex-row ">
         <Image
-          src={classroomToolkitImg}
+          src={bcatImg}
           className=" w-fit rounded-xl p-2 sm:max-h-[10rem] sm:pr-4 lg:max-h-[16rem]"
           priority={true}
           placeholder="blur"
@@ -20,17 +21,24 @@ export default function FeaturedProject() {
         />
         <div className="flex max-w-[30rem] flex-col justify-between">
           <p className="">
-            Classroom Toolkit is a site aimed at teachers to help make their
-            lives easier. It's build using Next.js and Typescript, using Next's
-            API route handlers as the back-end API which is linked to a
-            PostgreSQL database via Prisma. It currently only functions as a
-            simple class manager. Next up will be a selection of customisable
-            trackers which could be used for keeping track of which pupils have
-            completed homework or as a behaviour record.
+            The Band Coach Arranger Tool is a fairly niche app to help musicians
+            or music teachers record different sections of song arrangements. It
+            allows users to create multiple different sections for songs and
+            includes: an area for different rhythms, an area to record chord
+            inversions and an area to record different drum beats. It has been
+            designed as a{" "}
+            <a
+              className="text-sky-600 hover:underline"
+              href="https://en.wikipedia.org/wiki/Progressive_web_app"
+            >
+              Progressive Web App
+            </a>{" "}
+            to ensure that it can easily be accessed on work devices and will
+            store data regardless of web connectivity.
           </p>
           <Link
             className="my-2 place-self-end rounded-md bg-sky-600 p-2 text-white "
-            href={"/projects/classroom-toolkit"}
+            href={"/projects/bcat"}
           >
             Visit project page
           </Link>

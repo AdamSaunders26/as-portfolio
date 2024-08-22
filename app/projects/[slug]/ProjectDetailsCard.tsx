@@ -8,6 +8,10 @@ import ImageModal from "../ImageModal";
 export default function ProjectDetailsCard({ slide }: { slide: ProjectType }) {
   const [modalOpen, setModalOpen] = useState(false);
 
+  console.log(slide.details);
+  if (slide.details.includes("<a")) {
+    console.log(slide.details);
+  }
   return (
     <div
       key={slide.key}
@@ -30,8 +34,8 @@ export default function ProjectDetailsCard({ slide }: { slide: ProjectType }) {
           setModalOpen((curr) => !curr);
         }}
       />
-      <article className="m-2 mt-4 rounded-md  bg-white px-4 py-2 text-xl dark:bg-black lg:ml-10 lg:mt-2">
-        {slide.details}
+      <article className="m-2 mt-4 rounded-md  bg-white px-4 py-2 text-xl dark:bg-black lg:ml-10 lg:mt-2 [&_a]:text-sky-600 [&_a]:hover:underline ">
+        <div dangerouslySetInnerHTML={{ __html: slide.details }}></div>
       </article>
     </div>
   );

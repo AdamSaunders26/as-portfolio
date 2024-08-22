@@ -23,6 +23,8 @@ import {
   TailwindLogo,
   TypeScriptLogo,
   ZodLogo,
+  SerwistLogo,
+  FirebaseLogo,
 } from "../Components/SVGcomponents";
 
 export const languageArr: [string, string, JSX.Element][] = [
@@ -41,6 +43,7 @@ export const backEndTechs: [string, string, JSX.Element][] = [
   ["Supabase", "https://supabase.com/", <SupabaseLogo />],
   ["Jest", "https://jestjs.io/", <JestLogo />],
   ["Prisma", "https://www.prisma.io/", <PrismaLogo />],
+  ["Firebase", "https://firebase.google.com/", <FirebaseLogo />],
 ];
 
 export const frontEndTechs: [string, string, JSX.Element][] = [
@@ -54,6 +57,7 @@ export const frontEndTechs: [string, string, JSX.Element][] = [
   ["Next-Auth", "https://next-auth.js.org/", <NextAuthLogo />],
   ["Shadcn UI", "https://ui.shadcn.com/", <ShadcnLogo />],
   ["Zod", "https://zod.dev/", <ZodLogo />],
+  ["Serwist", "https://serwist.pages.dev/", <SerwistLogo />],
 ];
 
 export const otherTechs: [string, string, JSX.Element][] = [
@@ -110,4 +114,21 @@ export const ClassroomToolkitTech = [
   ["Zod", <ZodLogo isCarousel={true} />],
   ["Shadcn UI", <ShadcnLogo isCarousel={true} />],
   ["Next-Auth", <NextAuthLogo isCarousel={true} />],
+];
+export const BCATTech = [
+  ["Typescript", <TypeScriptLogo isCarousel={true} />],
+  ["Next.js", <NextLogo isCarousel={true} />],
+  ["React", <ReactLogo isCarousel={true} />],
+  ["Tailwind", <TailwindLogo isCarousel={true} />],
+  ["Serwist", <SerwistLogo isCarousel={true} />],
+];
+export const ReadingGenieTech = [
+  ["Typescript", <TypeScriptLogo isCarousel={true} />],
+  ["Next.js", <NextLogo isCarousel={true} />],
+  ["React", <ReactLogo isCarousel={true} />],
+  ["Tailwind", <TailwindLogo isCarousel={true} />],
+  ["Zod", <ZodLogo isCarousel={true} />],
+  ["Shadcn UI", <ShadcnLogo isCarousel={true} />],
+  ["OpenAI", <OpenAiLogo isCarousel={true} />],
+  ["Firebase", <FirebaseLogo isCarousel={true} />],
 ];

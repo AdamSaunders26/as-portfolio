@@ -15,12 +15,19 @@ import appIdeaGenerator2 from "../../images/appIdeaGenerator2.png";
 import appIdeaGenerator3 from "../../images/appIdeaGenerator3.png";
 import classroomToolkit1 from "../../images/classroomtoolkit1.png";
 import classroomToolkit2 from "../../images/classroomtoolkit2.png";
+import bcat1 from "../../images/bcat1.png";
+import bcat2 from "../../images/bcat2.png";
+import readingGenie1 from "../../images/readingGenie1.png";
+import readingGenie2 from "../../images/readingGenie2.png";
+
 import {
   AppIdeaGeneratorTech,
+  BCATTech,
   ClassroomToolkitTech,
   NCnewsAPITech,
   NCnewsTech,
   PortfolioTech,
+  ReadingGenieTech,
   soundWavesTech,
 } from "./technologies";
 
@@ -178,6 +185,44 @@ export const ClassroomToolkit: ProjectType[] = [
   },
 ];
 
+export const BCAT: ProjectType[] = [
+  {
+    key: 0,
+    slideName: "Overview",
+    imageSrc: bcat1,
+    alt: "The home screen and song view of the Band Coach Arranger Tool",
+    details:
+      "This app was primarily create to help with my job as a Band Coach, teaching childen to play in rock bands. I found that I spent of lot of time during the lessons trying to remember what we had covered the week before. So I created the BCAT to serve as a digital record of the rhythms and notes I taught each band. My main goals were to create something that would be quick and would be usable from my work iPad. I had been using paper originally but it was too slow and there were a lot of sheets to deal with.",
+  },
+  {
+    key: 1,
+    slideName: "Section Arranger",
+    imageSrc: bcat2,
+    alt: "A single section of a song with an area for rhythms, a keyboard and a drum kit",
+    details:
+      "This is the main complexity of the app - it was challenging to create interactive versions of a keyboard and drum kit! I  learnt a lot about creating PWA and utilising local storage during this process as I wanted to make sure the app was accessible without wifi and as reliable as possible. I'm still not entirely happy with my implementation of the drums and keyboard - it works, but in the future I would like to look into Canvas API to create the complex shapes instead.",
+  },
+];
+
+export const ReadingGenie: ProjectType[] = [
+  {
+    key: 0,
+    slideName: "Choose topic",
+    imageSrc: readingGenie1,
+    alt: "3 images. First: the home screen of Reading Genie, a purple page with a blue genie image. Second: a screen to choose the topic for Reading Genie. Third: a snippet of information about Great White Sharks.",
+    details:
+      "In November 2023 I took part in <a href='https://www.syncthecity.com/'>Sync The City</a>, a challenge to create a business in 54 hours. I was part of Reading Genie, an AI powered app designed to help children read more often by generating relevent and interesting micro-content. Essentially, a Tik-Tok for reading! I really enjoyed the event and we carried on with the project for some months afterwards but although children were initially keen on using the app, the novelty soon wore off. It was a great event to take part in - it was my first experience of working in a team with more than developers and I learnt a lot from everybody.",
+  },
+  {
+    key: 1,
+    slideName: "Different Bytes",
+    imageSrc: readingGenie2,
+    alt: "Three images of the different types of content on Reading Genie, a would you rather, a joke and a quiz",
+    details:
+      "We utilised AI to create a wide range of content (such as jokes and quizzes) as we though it was important to have relevent content that could cater to anything a child might be interested in. We had to do a lot of prompt engineering to ensure that the content was what we were looking for and also to ensure it was formatted correctly and consistently as a JSON object the app could intrepret and display. We also had to be very careful that the GPT model didn't return any indecent language that would have been inappropriate for children.",
+  },
+];
+
 export interface ProjectOverviewType {
   project: ProjectType[];
   projectName: string;
@@ -189,6 +234,22 @@ export interface ProjectOverviewType {
 }
 
 export const allProjects: ProjectOverviewType[] = [
+  {
+    project: BCAT,
+    projectName: "Band Coach Arranger Tool",
+    slug: "bcat",
+    githubURL: "https://github.com/AdamSaunders26/iRock-Arranger",
+    hostedURL: "https://irock-arranger.vercel.app/",
+    techArray: BCATTech,
+  },
+  {
+    project: ReadingGenie,
+    projectName: "Reading Genie",
+    slug: "reading-genie",
+    githubURL: "https://github.com/AdamSaunders26/Reading-Genie/settings",
+    hostedURL: "https://reading-genie.vercel.app/genie",
+    techArray: ReadingGenieTech,
+  },
   {
     project: ClassroomToolkit,
     projectName: "Classroom Toolkit",
