@@ -211,7 +211,7 @@ export const ReadingGenie: ProjectType[] = [
     imageSrc: readingGenie1,
     alt: "3 images. First: the home screen of Reading Genie, a purple page with a blue genie image. Second: a screen to choose the topic for Reading Genie. Third: a snippet of information about Great White Sharks.",
     details:
-      "In November 2023 I took part in <a href='https://www.syncthecity.com/'>Sync The City</a>, a challenge to create a business in 54 hours. I was part of Reading Genie, an AI powered app designed to help children read more often by generating relevent and interesting micro-content. Essentially, a Tik-Tok for reading! I really enjoyed the event and we carried on with the project for some months afterwards but although children were initially keen on using the app, the novelty soon wore off. It was a great event to take part in - it was my first experience of working in a team with more than developers and I learnt a lot from everybody.",
+      "In November 2023 I took part in <a target='_blank' href='https://www.syncthecity.com/'>Sync The City</a>, a challenge to create a business in 54 hours. I was part of Reading Genie, an AI powered app designed to help children read more often by generating relevent and interesting micro-content. Essentially, a Tik-Tok for reading! I really enjoyed the event and we carried on with the project for some months afterwards but although children were initially keen on using the app, the novelty soon wore off. It was a great event to take part in - it was my first experience of working in a team with more than developers and I learnt a lot from everybody.",
   },
   {
     key: 1,

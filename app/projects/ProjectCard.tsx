@@ -36,18 +36,21 @@ export default function ProjectCard({
           </a>
         ) : null}
         <h3 className=" w-fit place-self-center rounded-md  border-2  border-sky-600 bg-white px-2 text-center text-2xl font-bold text-neutral-800 dark:border-sky-500 dark:bg-black dark:text-white">
-          {projectName}
+          {hostedURL ? (
+            <a target="_blank" href={hostedURL}>
+              {projectName}
+            </a>
+          ) : (
+            projectName
+          )}
         </h3>
-        <a target="_blank" href={hostedURL}>
-          <FiExternalLink className="m-1 h-6 w-6" />
-        </a>
+        {hostedURL ? (
+          <a target="_blank" href={hostedURL}>
+            <FiExternalLink className="m-1 h-6 w-6" />
+          </a>
+        ) : null}
       </div>
       <Carousel project={project} />
-      {/* <div className="mt-2 flex flex-wrap justify-center gap-2">
-        {techArray.map((logo, index) => {
-          return <React.Fragment key={index}>{logo}</React.Fragment>;
-        })}
-      </div> */}
       <div className="flex items-center gap-2 place-self-end rounded-md border-2 border-white p-2 text-lg font-semibold hover:cursor-pointer hover:border-sky-600 dark:border-black hover:dark:border-sky-600">
         <Link href={`/projects/${slug}`}>See more</Link>
         <FiArrowRight className="h-6 w-6" />

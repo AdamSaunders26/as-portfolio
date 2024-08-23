@@ -27,7 +27,6 @@ export default function Home() {
           <h3 className="mb-2 text-xl font-bold  ">Software Developer</h3>
         </div>
         <p className="mt-2 border-b-2 border-sky-600 pb-2">
-          Recent{" "}
           <a
             className="text-sky-700 dark:text-sky-500 "
             target="_blank"
@@ -44,12 +43,10 @@ export default function Home() {
           Although I have many fond memories of the classes I've taught and
           schools I've worked at, coding has gotten me excited to get out of bed
           in the mornings again. I love the constant battle between taking on
-          tricky challenges and then actually finding solutions for them. This
-          portfolio website is the first thing I have created since leaving the
-          Northcoders course - I hope you enjoy browsing through the site.
-          Please don't hesitate to get in touch if you have a great idea you'd
-          like to collaborate on or if you think I'd be a good fit for a vacancy
-          at your company.
+          tricky challenges and then actually finding solutions for them. I'm
+          especially interested in EdTech because I've seen first hand the
+          postive impact effective technology can have on children, although
+          care must be taken to mitigate any possible negative aspects.
         </p>
       </article>
       <FeaturedProject />

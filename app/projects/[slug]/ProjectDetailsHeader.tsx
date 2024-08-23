@@ -18,7 +18,13 @@ export default function ProjectDetailsHeader({ currentProject }: Props) {
         <GithubLink url={githubURL} />
         {secondGithub ? <GithubLink url={secondGithub} /> : null}
         <h2 className="flex w-fit  rounded-md border-2 border-sky-600 p-2 text-center text-3xl font-bold dark:border-sky-500">
-          {projectName}
+          {hostedURL ? (
+            <a target="_blank" href={hostedURL}>
+              {projectName}
+            </a>
+          ) : (
+            projectName
+          )}
         </h2>
         {hostedURL ? <ExternalLink url={hostedURL} /> : null}
       </div>
