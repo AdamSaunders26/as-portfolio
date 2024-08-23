@@ -29,6 +29,7 @@ export default function FeaturedProject() {
             designed as a{" "}
             <a
               className="text-sky-600 hover:underline"
+              target="_blank"
               href="https://en.wikipedia.org/wiki/Progressive_web_app"
             >
               Progressive Web App
