@@ -5,21 +5,21 @@ import Link from "next/link";
 export default function FeaturedProject() {
   return (
     <article className=" sn:py-4 col-span-3 mt-4 h-fit w-fit place-self-center rounded-md bg-white px-4 py-2 dark:bg-black">
-      <h3 className="text-2xl">
+      <h3 className="text-2xl ">
         Currently working on:{"  "}
         <span className="font-bold text-sky-700 dark:text-sky-500">
           Band Coach Arranger Tool
         </span>
       </h3>
-      <div className="flex   flex-col  sm:flex-row ">
+      <div className="flex items-center gap-2 justify-between flex-col  sm:flex-row ">
         <Image
           src={bcatImg}
-          className=" w-fit rounded-xl p-2 sm:max-h-[10rem] sm:pr-4 lg:max-h-[16rem]"
+          className="   rounded-xl p-2 sm:max-h-[10rem] sm:w-[60%] sm:pr-4 lg:max-h-fit"
           priority={true}
           placeholder="blur"
           alt="A screenshot of the classes page on Classroom-toolkit.co.uk"
         />
-        <div className="flex max-w-[30rem] flex-col justify-between">
+        <div className="flex  sm:pt-4 flex-col justify-between">
           <p className="">
             The Band Coach Arranger Tool is a fairly niche app to help musicians
             or music teachers record different sections of song arrangements. It
