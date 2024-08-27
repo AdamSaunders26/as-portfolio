@@ -38,7 +38,7 @@ export default function FeaturedProject() {
             store data regardless of web connectivity.
           </p>
           <Link
-            className="my-2 place-self-end rounded-md bg-sky-600 p-2 text-white "
+            className="my-2 place-self-end rounded-md bg-sky-600 p-2 text-black "
             href={"/projects/bcat"}
           >
             Visit project page
